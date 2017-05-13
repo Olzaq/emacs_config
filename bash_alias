@@ -1,0 +1,3 @@
+alias ll='ls -CaFlq'
+alias glog='git lg'
+alias gpull='git pull --rebase'
