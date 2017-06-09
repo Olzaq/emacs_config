@@ -24,4 +24,4 @@
   whatadded = log --follow --diff-filter=A --find-renames=40%
 
   # remove a file from index
-  unadd = git reset HEAD
+  unadd = reset HEAD
