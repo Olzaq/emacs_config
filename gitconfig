@@ -30,3 +30,6 @@
 
   # remove a file from index
   unadd = reset HEAD
+
+[push]
+    default = matching
