@@ -32,4 +32,4 @@
   unadd = reset HEAD
 
 [push]
-    default = matching
+	default = current
