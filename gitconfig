@@ -25,5 +25,8 @@
   # usage: `git whatadded --foo.c`
   whatadded = log --follow --diff-filter=A --find-renames=40%
 
+  # undo last commit
+  uncommit = reset --soft HEAD^
+
   # remove a file from index
   unadd = reset HEAD
