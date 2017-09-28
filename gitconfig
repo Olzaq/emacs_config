@@ -25,6 +25,9 @@
   # usage: `git whatadded --foo.c`
   whatadded = log --follow --diff-filter=A --find-renames=40%
 
+  # Remove last commit
+  deleteLastCommit = reset --hard HEAD^
+
   # undo last commit
   uncommit = reset --soft HEAD^
 
