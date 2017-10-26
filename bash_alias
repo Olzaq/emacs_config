@@ -1,3 +1,9 @@
+
+CommitDiff()
+{
+    diff <(git show $1) <(git show $2)
+}
+
 alias ll='ls -CaFlq'
 alias glog='git lg'
 alias gpull='git pull --rebase'
