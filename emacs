@@ -57,6 +57,11 @@
     (set-frame-width  (selected-frame) 110))
 )
 
+;; One line scrolling
+(setq mouse-wheel-scroll-amount '(1 ((shift) . 1)))
+(setq scroll-step           1
+     scroll-conservatively 10000)
+
 (require 'ido)
 (ido-mode t)
 
