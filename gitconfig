@@ -25,6 +25,9 @@
   # usage: `git whatadded --foo.c`
   whatadded = log --follow --diff-filter=A --find-renames=40%
 
+  # find commit which last touched (or deleted) the file
+  lasttouched = rev-list -n 1 HEAD --
+
   # Remove last commit
   deleteLastCommit = reset --hard HEAD^
 
