@@ -12,7 +12,8 @@
 
 ;; default to better frame titles
 (setq frame-title-format
-      (concat  "%b - emacs@" (system-name)))
+      (list "%b@" (format "%s %%S: %%j " (system-name))
+        '(buffer-file-name "%f" (dired-directory dired-directory "%b"))))
 
 ;; default to unified diffs
 (setq diff-switches "-u")
