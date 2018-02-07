@@ -77,6 +77,8 @@
        '("\\.m$" . octave-mode)
        auto-mode-alist))
 
+(add-to-list 'auto-mode-alist '("\\.mak\\'" . makefile-mode))
+
 (defun infer-indentation-style ()
   ;; if our source file uses tabs, we use tabs, if spaces spaces, and if
   ;; neither, we use the current indent-tabs-mode
