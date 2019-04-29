@@ -99,7 +99,13 @@
     (if (> space-count tab-count) (setq indent-tabs-mode nil))
     (if (> tab-count space-count) (setq indent-tabs-mode t))))
 
+(setq c-default-style "bsd"
+  c-basic-offset 4)
+
+(global-linum-mode t)
+
 (add-hook 'before-save-hook 'delete-trailing-whitespace)
 (set-face-attribute 'default nil :height 102)
+(set-face-background 'fringe "LightGray")
 
 (add-to-list 'load-path "~/.emacs.d/lisp")
