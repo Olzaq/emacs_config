@@ -4,10 +4,13 @@ CommitDiff()
     diff <(git show $1) <(git show $2)
 }
 
-alias ll='ls -CaFlq'
+alias ll='ls -aFlq'
 alias glog='git lg'
 alias gpull='git pull --rebase'
 alias gpush='git push'
 
 alias groot='cd $(git rev-parse --show-toplevel 2>>/dev/null || echo .)'
 alias GRoot='cd $( rdir=`git rev-parse --show-superproject-working-tree 2>>/dev/null` ; if [ ! -z ${rdir} ]; then echo ${rdir}; else echo . ; fi || echo .)'
+
+alias gformat='git clang-format --extensions cpp,hpp,c,h'
+alias gformatlast='gformat HEAD^'
