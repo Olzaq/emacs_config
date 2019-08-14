@@ -36,7 +36,6 @@
 (setq indent-line-function 'insert-tab)
 (setq-default c-basic-offset 4)
 
-
 (global-set-key [M-left] 'previous-buffer)
 (global-set-key [M-right] 'next-buffer)
 (custom-set-variables
@@ -88,6 +87,6 @@
     (if (> tab-count space-count) (setq indent-tabs-mode t))))
 
 (add-hook 'before-save-hook 'delete-trailing-whitespace)
+(set-face-attribute 'default nil :height 102)
 
 (add-to-list 'load-path "~/.emacs.d/")
-
