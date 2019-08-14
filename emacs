@@ -89,4 +89,4 @@
 (add-hook 'before-save-hook 'delete-trailing-whitespace)
 (set-face-attribute 'default nil :height 102)
 
-(add-to-list 'load-path "~/.emacs.d/")
+(add-to-list 'load-path "~/.emacs.d/lisp")
