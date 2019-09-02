@@ -36,6 +36,8 @@
 (setq indent-line-function 'insert-tab)
 (setq-default c-basic-offset 4)
 
+(setq-default truncate-lines 0)
+
 (global-set-key [M-left] 'previous-buffer)
 (global-set-key [M-right] 'next-buffer)
 (custom-set-variables
