@@ -35,6 +35,7 @@
 (global-set-key (kbd "C-c g") 'counsel-git)
 (global-set-key (kbd "C-c j") 'counsel-git-grep)
 (global-set-key (kbd "C-x l") 'counsel-locate)
+(setq ivy-display-style 'fancy)
 
 ;; Tab width 4
 (setq-default indent-tabs-mode nil)
@@ -47,17 +48,21 @@
 (global-set-key [M-left] 'previous-buffer)
 (global-set-key [M-right] 'next-buffer)
 (custom-set-variables
-  ;; custom-set-variables was added by Custom.
-  ;; If you edit it by hand, you could mess it up, so be careful.
-  ;; Your init file should contain only one such instance.
-  ;; If there is more than one, they won't work right.
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
  '(inhibit-startup-screen t))
 (custom-set-faces
-  ;; custom-set-faces was added by Custom.
-  ;; If you edit it by hand, you could mess it up, so be careful.
-  ;; Your init file should contain only one such instance.
-  ;; If there is more than one, they won't work right.
- )
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(ivy-current-match ((t (:background "blue violet" :foreground "dodger blue"))))
+ '(swiper-minibuffer-match-face-1 ((t :background "#dddddd")))
+ '(swiper-minibuffer-match-face-2 ((t :background "#bbbbbb" :weight bold)))
+ '(swiper-minibuffer-match-face-3 ((t :background "#bbbbff" :weight bold)))
+ '(swiper-minibuffer-match-face-4 ((t :background "#ffbbff" :weight bold))))
 
 (if (window-system)
   (progn
