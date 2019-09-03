@@ -30,6 +30,12 @@
 ;; cycle through buffers with Ctrl-Tab (like Firefox)
 (global-set-key (kbd "<C-tab>") 'bury-buffer)
 
+(global-set-key (kbd "C-c a") (lambda () (interactive) (counsel-ag nil nil "-U --depth 30")))
+(global-set-key (kbd "C-c s") 'swiper)
+(global-set-key (kbd "C-c g") 'counsel-git)
+(global-set-key (kbd "C-c j") 'counsel-git-grep)
+(global-set-key (kbd "C-x l") 'counsel-locate)
+
 ;; Tab width 4
 (setq-default indent-tabs-mode nil)
 (setq-default tab-width 4)
