@@ -4,6 +4,8 @@ CommitDiff()
     diff <(git show $1) <(git show $2)
 }
 
+alias EditChange="git show --pretty= --name-status | grep -v '^D' | cut -f2 -d$'\t' | (xargs emacs ) &"
+
 alias ll='ls -aFlq'
 alias glog='git lg'
 alias gpull='git pull --rebase'
