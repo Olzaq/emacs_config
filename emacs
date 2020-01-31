@@ -70,6 +70,7 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(ivy-current-match ((t (:background "blue violet" :foreground "dodger blue"))))
+ '(region ((t (:background "cyan" :distant-foreground "gtk_selection_fg_color"))))
  '(swiper-minibuffer-match-face-1 ((t :background "#dddddd")))
  '(swiper-minibuffer-match-face-2 ((t :background "#bbbbbb" :weight bold)))
  '(swiper-minibuffer-match-face-3 ((t :background "#bbbbff" :weight bold)))
