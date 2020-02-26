@@ -4,6 +4,11 @@ CommitDiff()
     diff <(git show $1) <(git show $2)
 }
 
+git_branch()
+{
+    git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/';
+}
+
 alias EditChange="git show --pretty= --name-status | grep -v '^D' | cut -f2 -d$'\t' | (xargs emacs ) &"
 
 alias ll='ls -aFlq'
