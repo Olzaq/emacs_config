@@ -25,6 +25,9 @@
 
   showmerge = "!sh -c 'git show $1 | grep --color=never "Merge: " | sed -e \"s/Merge: //\" | sed -e \"s/ /.../\" | xargs git diff '"
 
+  showdeleted = log --diff-filter=D --summary
+  showadded = log --diff-filter=A --summary
+
   #
   # from https://github.com/alikins/gitconfig/blob/master/gitconfig
   #
