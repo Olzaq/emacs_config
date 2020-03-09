@@ -27,6 +27,7 @@
 
   showdeleted = log --diff-filter=D --summary
   showadded = log --diff-filter=A --summary
+  showunmerged = ls-files -u
 
   #
   # from https://github.com/alikins/gitconfig/blob/master/gitconfig
