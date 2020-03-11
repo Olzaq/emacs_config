@@ -29,6 +29,10 @@
   showadded = log --diff-filter=A --summary
   showunmerged = ls-files -u
 
+  searchfor = "!sh -c 'git branch | tr -d \\* | xargs git grep $0 '"
+  searchallfor = "!sh -c 'git branch -a | tr -d \\* | sed -e \"s/->.*//\" | xargs git grep $0 '"
+  searchwithcontextfor = "!sh -c 'git branch | tr -d \\* | xargs git grep -C 2 $0 '"
+
   #
   # from https://github.com/alikins/gitconfig/blob/master/gitconfig
   #
