@@ -104,6 +104,11 @@
 
 (add-to-list 'auto-mode-alist '("\\.mak\\'" . makefile-mode))
 
+(defun to-underscore () (interactive)
+    (progn (replace-regexp "\\([A-Z]\\)" "_\\1" nil
+    (region-beginning) (region-end)) (downcase-region (region-beginning) (region-end)))
+)
+
 (defun infer-indentation-style ()
   ;; if our source file uses tabs, we use tabs, if spaces spaces, and if
   ;; neither, we use the current indent-tabs-mode
