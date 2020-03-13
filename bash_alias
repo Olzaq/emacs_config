@@ -14,9 +14,11 @@ export PS1="[\[\e[37m\]\u@\h \[\e[32m\]\w\[\e[31m\] $(git_branch)\[\e[00m\]]$ "
 alias EditChange="git show --pretty= --name-status | grep -v '^D' | cut -f2 -d$'\t' | (xargs emacs ) &"
 
 alias ll='ls -aFlq'
+
 alias glog='git lg'
 alias gpull='git pull --rebase'
 alias gpush='git push'
+alias gsno='git show --name-only'
 
 alias groot='cd $(git rev-parse --show-toplevel 2>>/dev/null || echo .)'
 alias GRoot='cd $( rdir=`git rev-parse --show-superproject-working-tree 2>>/dev/null` ; if [ ! -z ${rdir} ]; then echo ${rdir}; else echo . ; fi || echo .)'
