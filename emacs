@@ -1,3 +1,4 @@
+; -*- mode: Lisp;-*-
 ;; .emacs
 
 ;;; uncomment this line to disable loading of "default.el" at startup
