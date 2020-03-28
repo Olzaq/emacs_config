@@ -1,3 +1,6 @@
 [submodule "ag.el"]
 	path = ag.el
 	url = https://github.com/Wilfred/ag.el
+[submodule "editorconfig-emacs"]
+	path = editorconfig-emacs
+	url = https://github.com/editorconfig/editorconfig-emacs
