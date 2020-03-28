@@ -153,4 +153,7 @@
 (set-face-attribute 'default nil :height 102)
 (set-face-background 'fringe "LightGray")
 
+(add-to-list 'load-path "~/.emacs_modules/ag.el")
+(require 'ag)
+
 (add-to-list 'load-path "~/.emacs.d/lisp")
