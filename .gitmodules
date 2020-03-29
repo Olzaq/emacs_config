@@ -4,3 +4,6 @@
 [submodule "editorconfig-emacs"]
 	path = editorconfig-emacs
 	url = https://github.com/editorconfig/editorconfig-emacs
+[submodule "swiper"]
+	path = swiper
+	url = https://github.com/abo-abo/swiper
