@@ -157,6 +157,10 @@
 (add-to-list 'load-path "~/.emacs_modules/ag.el")
 (require 'ag)
 
+(add-to-list 'load-path "~/.emacs_modules/swiper")
+(require 'swiper)
+(require 'counsel)
+
 (add-to-list 'load-path "~/.emacs_modules/editorconfig-emacs")
 (require 'editorconfig)
 (editorconfig-mode 1)
