@@ -1,12 +1,12 @@
 [submodule "ag.el"]
-	path = ag.el
+	path = ext/ag.el
 	url = https://github.com/Wilfred/ag.el
 [submodule "editorconfig-emacs"]
 	path = editorconfig-emacs
 	url = https://github.com/editorconfig/editorconfig-emacs
 [submodule "swiper"]
-	path = swiper
+	path = ext/swiper
 	url = https://github.com/abo-abo/swiper
 [submodule "dash.el"]
-	path = dash.el
+	path = ext/dash.el
 	url = https://github.com/magnars/dash.el
