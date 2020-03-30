@@ -176,4 +176,9 @@
 (require 'multiple-cursors)
 (editorconfig-mode 1)
 
+(global-set-key (kbd "C-S-c C-S-c") 'mc/edit-lines)
+(global-set-key (kbd "C-c n") 'mc/mark-next-like-this)
+(global-set-key (kbd "C-c p") 'mc/mark-previous-like-this)
+(global-set-key (kbd "C-c A") 'mc/mark-all-like-this)
+
 (add-to-list 'load-path "~/.emacs.d/lisp")
