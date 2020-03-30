@@ -2,7 +2,7 @@
 	path = ext/ag.el
 	url = https://github.com/Wilfred/ag.el
 [submodule "editorconfig-emacs"]
-	path = editorconfig-emacs
+	path = ext/editorconfig-emacs
 	url = https://github.com/editorconfig/editorconfig-emacs
 [submodule "swiper"]
 	path = ext/swiper
