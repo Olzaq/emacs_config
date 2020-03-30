@@ -13,3 +13,6 @@
 [submodule "ext/s.el"]
 	path = ext/s.el
 	url = https://github.com/magnars/s.el
+[submodule "ext/multiple-cursors.el"]
+	path = ext/multiple-cursors.el
+	url = https://github.com/magnars/multiple-cursors.el

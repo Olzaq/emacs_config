@@ -161,6 +161,7 @@
 (add-to-list 'load-path "~/.emacs_modules/ag.el")
 (add-to-list 'load-path "~/.emacs_modules/swiper")
 (add-to-list 'load-path "~/.emacs_modules/editorconfig-emacs")
+(add-to-list 'load-path "~/.emacs_modules/multiple-cursors.el")
 
 ;(byte-recompile-directory "~/.emacs_modules/dash.el" 0)
 (byte-recompile-directory "~/.emacs_modules/s.el" 0)
@@ -172,6 +173,7 @@
 (require 'swiper)
 (require 'counsel)
 (require 'editorconfig)
+(require 'multiple-cursors)
 (editorconfig-mode 1)
 
 (add-to-list 'load-path "~/.emacs.d/lisp")
