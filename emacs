@@ -155,6 +155,7 @@
 (set-face-background 'fringe "LightGray")
 
 (add-to-list 'load-path "~/.emacs_modules/dash.el")
+(add-to-list 'load-path "~/.emacs_modules/s.el")
 (add-to-list 'load-path "~/.emacs_modules/ag.el")
 (require 'ag)
 
