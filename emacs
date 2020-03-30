@@ -145,6 +145,8 @@
     (if (> space-count tab-count) (setq indent-tabs-mode nil))
     (if (> tab-count space-count) (setq indent-tabs-mode t))))
 
+(global-set-key (kbd "C-c c") 'camelscore-word-at-point)
+
 (setq c-default-style "bsd"
   c-basic-offset 4)
 
