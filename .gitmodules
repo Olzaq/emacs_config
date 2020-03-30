@@ -16,3 +16,6 @@
 [submodule "ext/multiple-cursors.el"]
 	path = ext/multiple-cursors.el
 	url = https://github.com/magnars/multiple-cursors.el
+[submodule "flycheck"]
+	path = ext/flycheck
+	url = https://github.com/flycheck/flycheck

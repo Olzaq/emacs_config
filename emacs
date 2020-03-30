@@ -162,6 +162,7 @@
 (add-to-list 'load-path "~/.emacs_modules/swiper")
 (add-to-list 'load-path "~/.emacs_modules/editorconfig-emacs")
 (add-to-list 'load-path "~/.emacs_modules/multiple-cursors.el")
+(add-to-list 'load-path "~/.emacs_modules/flycheck")
 
 ;(byte-recompile-directory "~/.emacs_modules/dash.el" 0)
 (byte-recompile-directory "~/.emacs_modules/s.el" 0)
@@ -180,5 +181,8 @@
 (global-set-key (kbd "C-c n") 'mc/mark-next-like-this)
 (global-set-key (kbd "C-c p") 'mc/mark-previous-like-this)
 (global-set-key (kbd "C-c A") 'mc/mark-all-like-this)
+
+(add-hook 'after-init-hook #'global-flycheck-mode)
+(require 'flycheck)
 
 (add-to-list 'load-path "~/.emacs.d/lisp")
