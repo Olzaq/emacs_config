@@ -156,13 +156,13 @@
 (set-face-attribute 'default nil :height 102)
 (set-face-background 'fringe "LightGray")
 
-(add-to-list 'load-path "~/.emacs_modules/dash.el")
-(add-to-list 'load-path "~/.emacs_modules/s.el")
 (add-to-list 'load-path "~/.emacs_modules/ag.el")
-(add-to-list 'load-path "~/.emacs_modules/swiper")
+(add-to-list 'load-path "~/.emacs_modules/dash.el")
+(add-to-list 'load-path "~/.emacs_modules/flycheck")
 (add-to-list 'load-path "~/.emacs_modules/editorconfig-emacs")
 (add-to-list 'load-path "~/.emacs_modules/multiple-cursors.el")
-(add-to-list 'load-path "~/.emacs_modules/flycheck")
+(add-to-list 'load-path "~/.emacs_modules/s.el")
+(add-to-list 'load-path "~/.emacs_modules/swiper")
 (add-to-list 'load-path "~/.emacs_modules/with-editor")
 
 ;(byte-recompile-directory "~/.emacs_modules/dash.el" 0)
