@@ -19,3 +19,6 @@
 [submodule "flycheck"]
 	path = ext/flycheck
 	url = https://github.com/flycheck/flycheck
+[submodule "ext/with-editor"]
+	path = ext/with-editor
+	url = https://github.com/magit/with-editor
