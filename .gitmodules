@@ -25,3 +25,6 @@
 [submodule "ext/transient"]
 	path = ext/transient
 	url = https://github.com/magit/transient
+[submodule "magit"]
+	path = ext/magit
+	url = https://github.com/magit/magit
