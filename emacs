@@ -173,9 +173,10 @@
 (byte-recompile-directory "~/.emacs_modules/with-editor" 0)
 
 (require 'ag)
-(require 'swiper)
 (require 'counsel)
 (require 'editorconfig)
+(require 'swiper)
+
 (require 'multiple-cursors)
 (editorconfig-mode 1)
 
