@@ -30,7 +30,7 @@
 	url = https://github.com/magit/magit
 [submodule "ext/seq"]
 	path = ext/seq
-	url = https://github.com/NicolasPetton/seq.el
+	url = https://github.com/Olzaq/seq.el.git
 [submodule "ext/f.el"]
 	path = ext/f.el
 	url = https://github.com/rejeep/f.el
