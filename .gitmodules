@@ -31,3 +31,6 @@
 [submodule "ext/seq"]
 	path = ext/seq
 	url = https://github.com/NicolasPetton/seq.el
+[submodule "ext/f.el"]
+	path = ext/f.el
+	url = https://github.com/rejeep/f.el

@@ -182,6 +182,7 @@
 (require 'counsel)
 (require 'editorconfig)
 (require 'swiper)
+(require 'magit)
 
 (require 'multiple-cursors)
 (editorconfig-mode 1)
