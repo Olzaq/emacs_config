@@ -22,3 +22,6 @@
 [submodule "ext/with-editor"]
 	path = ext/with-editor
 	url = https://github.com/magit/with-editor
+[submodule "ext/transient"]
+	path = ext/transient
+	url = https://github.com/magit/transient
