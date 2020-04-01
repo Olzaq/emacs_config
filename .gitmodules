@@ -28,3 +28,6 @@
 [submodule "magit"]
 	path = ext/magit
 	url = https://github.com/magit/magit
+[submodule "ext/seq"]
+	path = ext/seq
+	url = https://github.com/NicolasPetton/seq.el
