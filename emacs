@@ -165,11 +165,11 @@
 (add-to-list 'load-path "~/.emacs_modules/swiper")
 (add-to-list 'load-path "~/.emacs_modules/with-editor")
 
-;(byte-recompile-directory "~/.emacs_modules/dash.el" 0)
-(byte-recompile-directory "~/.emacs_modules/s.el" 0)
 ;(byte-recompile-directory "~/.emacs_modules/ag.el" 0)
-;(byte-recompile-directory "~/.emacs_modules/swiper" 0)
+;(byte-recompile-directory "~/.emacs_modules/dash.el" 0)
 (byte-recompile-directory "~/.emacs_modules/editorconfig-emacs" 0)
+(byte-recompile-directory "~/.emacs_modules/s.el" 0)
+;(byte-recompile-directory "~/.emacs_modules/swiper" 0)
 (byte-recompile-directory "~/.emacs_modules/with-editor" 0)
 
 (require 'ag)
