@@ -29,6 +29,9 @@
 ;disable backup
 (setq backup-inhibited t)
 
+(add-hook 'c-mode-common-hook
+          (lambda () (subword-mode 1)))
+
 ;; always end a file with a newline
 ;(setq require-final-newline 'query)
 
