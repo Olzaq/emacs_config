@@ -34,3 +34,6 @@
 [submodule "ext/f.el"]
 	path = ext/f.el
 	url = https://github.com/rejeep/f.el
+[submodule "ext/hydra.git"]
+	path = ext/hydra.git
+	url = https://github.com/abo-abo/hydra.git
