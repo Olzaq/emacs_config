@@ -29,6 +29,8 @@
 ;disable backup
 (setq backup-inhibited t)
 
+(setq case-replace nil)
+
 (add-hook 'c-mode-common-hook
           (lambda () (subword-mode 1)))
 
