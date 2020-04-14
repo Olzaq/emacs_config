@@ -37,3 +37,6 @@
 [submodule "ext/hydra.git"]
 	path = ext/hydra.git
 	url = https://github.com/abo-abo/hydra.git
+[submodule "ext/undercover.el"]
+	path = ext/undercover.el
+	url = https://github.com/undercover-el/undercover.el

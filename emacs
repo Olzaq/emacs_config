@@ -173,6 +173,7 @@
 (add-to-list 'load-path "~/.emacs_modules/seq")
 (add-to-list 'load-path "~/.emacs_modules/swiper")
 (add-to-list 'load-path "~/.emacs_modules/transient/lisp")
+(add-to-list 'load-path "~/.emacs_modules/undercover.el")
 (add-to-list 'load-path "~/.emacs_modules/with-editor")
 
 ;(byte-recompile-directory "~/.emacs_modules/ag.el" 0)
