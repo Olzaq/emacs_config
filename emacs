@@ -198,8 +198,10 @@
 (require 'counsel)
 (require 'editorconfig)
 (require 'swiper)
-(require 'magit)
-
+(if (version< emacs-version "25")
+    (message "Skipping magit")
+  (require 'magit)
+)
 (require 'multiple-cursors)
 (editorconfig-mode 1)
 
