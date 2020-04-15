@@ -178,7 +178,6 @@
 (add-to-list 'load-path "~/.emacs_modules/undercover.el")
 (add-to-list 'load-path "~/.emacs_modules/with-editor")
 
-(byte-recompile-directory "~/.emacs_modules/ag.el" 0)
 ;(byte-recompile-directory "~/.emacs_modules/dash.el" 0)
 (byte-recompile-directory "~/.emacs_modules/editorconfig-emacs" 0)
 (if (version< emacs-version "26")
@@ -188,6 +187,7 @@
 (byte-recompile-directory "~/.emacs_modules/hydra.git" 0)
 (if (version< emacs-version "25")
     (message "Skipping bytecompile...")
+  (byte-recompile-directory "~/.emacs_modules/ag.el" 0)
   ;(byte-recompile-directory "~/.emacs_modules/magit/" 0)
   (byte-recompile-directory "~/.emacs_modules/s.el" 0)
   (byte-recompile-directory "~/.emacs_modules/seq" 0)
