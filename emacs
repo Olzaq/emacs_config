@@ -53,6 +53,7 @@
 (global-set-key (kbd "C-c j") 'counsel-git-grep)
 (global-set-key (kbd "C-x l") 'counsel-locate)
 (global-set-key (kbd "C-x g") 'ag-project)
+(global-set-key (kbd "C-c C-r") 'ivy-resume)
 (setq ivy-display-style 'fancy)
 
 ;; Tab width 4
