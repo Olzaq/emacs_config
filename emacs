@@ -123,7 +123,13 @@
 	  (replace-regexp-in-string "\\([a-z]\\)\\([A-Z]\\)" "\\1 \\2" s)))
    "[^A-Za-z0-9]+"))
 
-(defun camelcase  (s) (mapconcat 'capitalize (split-name s) ""))
+(defun capitalize-all-but-first (l)
+  (let ((first (car l))
+        (rest (cdr l)))
+    (cons first (mapcar 'capitalize rest)) ))
+
+(defun camelCase  (s) (mapconcat 'identity (capitalize-all-but-first (split-name s)) ""))
+(defun CamelCase  (s) (mapconcat 'capitalize (split-name s) ""))
 (defun underscore (s) (mapconcat 'downcase   (split-name s) "_"))
 (defun dasherize  (s) (mapconcat 'downcase   (split-name s) "-"))
 (defun colonize   (s) (mapconcat 'capitalize (split-name s) "::"))
@@ -139,7 +145,8 @@
 
 (defun camelscore (s)
   (cond ((string-match-p "\\(?:[a-z]+_\\)+[a-z]+" s)	(dasherize  s))
-	    ((string-match-p "\\(?:[a-z]+-\\)+[a-z]+" s)	(camelcase  s))
+        ((string-match-p "\\(?:[a-z]+-\\)+[a-z]+" s)	(camelCase  s))
+	    ((string-match-p "\\(?:[a-z]+-\\)+[A-Z][a-z]+" s)	(CamelCase  s))
 	    ((string-match-p "\\(?:[A-Z][a-z]+::\\)+[A-Z][a-z]+" s)	(underscore s))
 	    ((string-match-p "\\(?:[A-Z][a-z]+\\)+$"  s)	(colonize   s)) ))
 
