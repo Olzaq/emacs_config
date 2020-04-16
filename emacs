@@ -140,8 +140,8 @@
 (defun camelscore (s)
   (cond ((string-match-p "\\(?:[a-z]+_\\)+[a-z]+" s)	(dasherize  s))
 	    ((string-match-p "\\(?:[a-z]+-\\)+[a-z]+" s)	(camelcase  s))
-	    ((string-match-p "\\(?:[A-Z][a-z]+\\)+$"  s)	(colonize   s))
-	    (t						(underscore s)) ))
+	    ((string-match-p "\\(?:[A-Z][a-z]+::\\)+[A-Z][a-z]+" s)	(underscore s))
+	    ((string-match-p "\\(?:[A-Z][a-z]+\\)+$"  s)	(colonize   s)) ))
 
 (defun infer-indentation-style ()
   ;; if our source file uses tabs, we use tabs, if spaces spaces, and if
