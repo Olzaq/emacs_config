@@ -144,11 +144,11 @@
 	(if cml (progn (delete-region beg end) (insert cml))) ))
 
 (defun camelscore (s)
-  (cond ((string-match-p "\\(?:[a-z]+_\\)+[a-z]+" s)	(dasherize  s))
-        ((string-match-p "\\(?:[a-z]+-\\)+[a-z]+" s)	(camelCase  s))
-	    ((string-match-p "\\(?:[a-z]+-\\)+[A-Z][a-z]+" s)	(CamelCase  s))
+  (cond ((string-match-p "\\(?:[a-z]+_\\)+[a-z]+" s)	        (dasherize  s))
+        ((string-match-p "\\(?:[a-z]+-\\)+[a-z]+" s)	        (camelCase  s))
+	    ((string-match-p "\\b[a-z]+\\(?:[A-Z][a-z]+\\)+" s)	    (CamelCase  s))
 	    ((string-match-p "\\(?:[A-Z][a-z]+::\\)+[A-Z][a-z]+" s)	(underscore s))
-	    ((string-match-p "\\(?:[A-Z][a-z]+\\)+$"  s)	(colonize   s)) ))
+        ((string-match-p "\\(?:[A-Z][a-z]+\\)+$"  s)	        (colonize   s)) ))
 
 (defun infer-indentation-style ()
   ;; if our source file uses tabs, we use tabs, if spaces spaces, and if
