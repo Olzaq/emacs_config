@@ -81,8 +81,6 @@
 (setq scroll-step           1
      scroll-conservatively 10000)
 
-(require 'ido)
-(ido-mode t)
 
 ;;(autoload 'matlab-mode "matlab" "Matlab Editing Mode" t)
 ;;(add-to-list
@@ -116,57 +114,10 @@
 (set-face-attribute 'default nil :height 102)
 (set-face-background 'fringe "LightGray")
 
-(add-to-list 'load-path "~/.emacs_modules/ag.el")
-(add-to-list 'load-path "~/.emacs_modules/dash.el")
-(add-to-list 'load-path "~/.emacs_modules/editorconfig-emacs")
-(add-to-list 'load-path "~/.emacs_modules/f.el")
-(add-to-list 'load-path "~/.emacs_modules/flycheck")
-(add-to-list 'load-path "~/.emacs_modules/hydra.git")
-(add-to-list 'load-path "~/.emacs_modules/magit/lisp")
-(add-to-list 'load-path "~/.emacs_modules/multiple-cursors.el")
-(add-to-list 'load-path "~/.emacs_modules/s.el")
-(add-to-list 'load-path "~/.emacs_modules/seq")
-(add-to-list 'load-path "~/.emacs_modules/shut-up")
-(add-to-list 'load-path "~/.emacs_modules/swiper")
-(add-to-list 'load-path "~/.emacs_modules/transient/lisp")
-(add-to-list 'load-path "~/.emacs_modules/undercover.el")
-(add-to-list 'load-path "~/.emacs_modules/with-editor")
-
-;(byte-recompile-directory "~/.emacs_modules/dash.el" 0)
-(byte-recompile-directory "~/.emacs_modules/editorconfig-emacs" 0)
-(if (version< emacs-version "26")
-    (message "Skipping bytecompile: f.el")
-  ;(byte-recompile-directory "~/.emacs_modules/f.el" 0)
-  )
-(byte-recompile-directory "~/.emacs_modules/hydra.git" 0)
-(if (version< emacs-version "25")
-    (message "Skipping bytecompile...")
-  (byte-recompile-directory "~/.emacs_modules/ag.el" 0)
-  ;(byte-recompile-directory "~/.emacs_modules/magit/" 0)
-  (byte-recompile-directory "~/.emacs_modules/s.el" 0)
-  (byte-recompile-directory "~/.emacs_modules/seq" 0)
-  (byte-recompile-directory "~/.emacs_modules/swiper" 0)
-  (byte-recompile-directory "~/.emacs_modules/transient" 0)
-  )
-
-(byte-recompile-directory "~/.emacs_modules/with-editor" 0)
-
-(require 'ag)
-(require 'counsel)
-(require 'editorconfig)
-(require 'swiper)
-(if (version< emacs-version "25")
-    (message "Skipping magit")
-  (require 'magit)
-)
-(require 'multiple-cursors)
-(editorconfig-mode 1)
-
-(add-hook 'after-init-hook #'global-flycheck-mode)
-(require 'flycheck)
 
 (add-to-list 'load-path "~/.emacs.d/lisp")
-
 (add-to-list 'load-path (file-truename "~/.emacs_modules/.."))
+
+(require 'ext-modules)
 (require 'own-mappings)
 (require 'own-functions)
