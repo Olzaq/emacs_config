@@ -59,8 +59,14 @@
 
 
 ;; C-mode setting
-(setq c-default-style "bsd"
-  c-basic-offset 4)
+(defconst bsd-style-extend
+  '("bsd"
+    (c-basic-offset 4)
+    (c-offsets-alist . ((innamespace . [0])))))
+
+(c-add-style "bsd-style-extend" bsd-style-extend)
+
+(setq c-default-style "bsd-style-extend")
 
 (add-hook 'c-mode-common-hook
           (lambda () (subword-mode 1)))
