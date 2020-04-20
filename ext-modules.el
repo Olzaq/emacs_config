@@ -47,14 +47,11 @@
 (require 'swiper)
 
 (if (version< emacs-version "25")
-    (message "Skipping magit")
+    (message "Skipping some modules...")
+  (add-hook 'after-init-hook #'global-flycheck-mode)
+  (require 'flycheck)
   (require 'magit)
 )
-
-(add-hook 'after-init-hook #'global-flycheck-mode)
-(require 'flycheck)
-
-
 
 (editorconfig-mode 1)
 (ido-mode t)
