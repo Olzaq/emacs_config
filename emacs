@@ -96,6 +96,7 @@
   c-basic-offset 4)
 
 (global-linum-mode t)
+(setq column-number-mode t)
 
 (add-hook 'before-save-hook 'delete-trailing-whitespace)
 (set-face-attribute 'default nil :height 102)
