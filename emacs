@@ -10,6 +10,11 @@
 ;; You may delete these explanatory comments.
 (package-initialize)
 
+; disable some defaults
+(setq backup-inhibited t)
+(setq inhibit-startup-screen t)
+(setq case-replace nil)
+
 ;; turn on font-lock mode
 (when (fboundp 'global-font-lock-mode)
   (global-font-lock-mode t))
@@ -25,16 +30,9 @@
 ;; default to unified diffs
 (setq diff-switches "-u")
 
-;disable backup
-(setq backup-inhibited t)
-
-(setq case-replace nil)
 
 (add-hook 'c-mode-common-hook
           (lambda () (subword-mode 1)))
-
-;; always end a file with a newline
-;(setq require-final-newline 'query)
 
 ;; use del correctly
 (normal-erase-is-backspace-mode 1)
@@ -49,12 +47,9 @@
 (setq-default c-basic-offset 4)
 
 (setq-default truncate-lines 0)
-(setq inhibit-startup-screen t)
+
+
 (custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
  '(ivy-current-match ((t (:background "blue violet" :foreground "dodger blue"))))
  '(region ((t (:background "cyan" :distant-foreground "gtk_selection_fg_color"))))
  '(swiper-minibuffer-match-face-1 ((t :background "#dddddd")))
