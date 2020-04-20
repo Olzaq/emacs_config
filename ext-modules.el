@@ -10,6 +10,7 @@
 (add-to-list 'load-path "~/.emacs_modules/f.el")
 (add-to-list 'load-path "~/.emacs_modules/flycheck")
 (add-to-list 'load-path "~/.emacs_modules/hydra.git")
+(add-to-list 'load-path "~/.emacs_modules/irony-mode")
 (add-to-list 'load-path "~/.emacs_modules/magit/lisp")
 (add-to-list 'load-path "~/.emacs_modules/multiple-cursors.el")
 (add-to-list 'load-path "~/.emacs_modules/s.el")
@@ -43,6 +44,7 @@
 (require 'counsel)
 (require 'editorconfig)
 (require 'ido)
+(require 'irony)
 (require 'multiple-cursors)
 (require 'swiper)
 
