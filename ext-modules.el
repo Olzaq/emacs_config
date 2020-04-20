@@ -45,6 +45,7 @@
 (require 'editorconfig)
 (require 'ido)
 (require 'irony)
+(require 'irony-cdb)
 (require 'multiple-cursors)
 (require 'swiper)
 

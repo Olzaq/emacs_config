@@ -71,6 +71,9 @@
 (add-hook 'c-mode-common-hook
           (lambda () (subword-mode 1)))
 
+(add-hook 'c++-mode-hook 'irony-mode)
+(add-hook 'c-mode-hook 'irony-mode)
+(add-hook 'irony-mode-hook 'irony-cdb-autosetup-compile-options)
 
 ;; Faces
 (custom-set-faces
