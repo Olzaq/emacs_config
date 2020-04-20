@@ -5,6 +5,7 @@
 ;;; Code:
 
 (add-to-list 'load-path "~/.emacs_modules/ag.el")
+(add-to-list 'load-path "~/.emacs_modules/company-irony")
 (add-to-list 'load-path "~/.emacs_modules/company-mode")
 (add-to-list 'load-path "~/.emacs_modules/dash.el")
 (add-to-list 'load-path "~/.emacs_modules/editorconfig-emacs")
@@ -61,6 +62,8 @@
 (editorconfig-mode 1)
 (ido-mode t)
 (add-hook 'after-init-hook 'global-company-mode)
+(eval-after-load 'company
+  '(add-to-list 'company-backends 'company-irony))
 
 (provide 'ext-modules)
 ;;; ext-modules.el ends here
