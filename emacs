@@ -34,9 +34,6 @@
 (add-hook 'c-mode-common-hook
           (lambda () (subword-mode 1)))
 
-;; use del correctly
-(normal-erase-is-backspace-mode 1)
-
 (recentf-mode 1)
 (setq recentf-max-menu-items 25)
 
@@ -60,9 +57,10 @@
 (setq ivy-display-style 'fancy)
 
 (if (window-system)
-  (progn
-    (set-frame-height (selected-frame) 50)
-    (set-frame-width  (selected-frame) 110))
+    (progn
+      (normal-erase-is-backspace-mode t)
+      (set-frame-height (selected-frame) 50)
+      (set-frame-width  (selected-frame) 110))
 )
 
 ;; One line scrolling
