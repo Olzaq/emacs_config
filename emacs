@@ -41,19 +41,6 @@
 
 (recentf-mode 1)
 (setq recentf-max-menu-items 25)
-(global-set-key "\C-x\ \C-r" 'recentf-open-files)
-
-;; cycle through buffers with Ctrl-Tab (like Firefox)
-(global-set-key (kbd "<C-tab>") 'bury-buffer)
-
-(global-set-key (kbd "C-c a") (lambda () (interactive) (counsel-ag nil nil "-U --depth 30")))
-(global-set-key (kbd "C-c s") 'swiper)
-(global-set-key (kbd "C-c g") 'counsel-git)
-(global-set-key (kbd "C-c j") 'counsel-git-grep)
-(global-set-key (kbd "C-x l") 'counsel-locate)
-(global-set-key (kbd "C-x g") 'ag-project)
-(global-set-key (kbd "C-c C-r") 'ivy-resume)
-(setq ivy-display-style 'fancy)
 
 ;; Tab width 4
 (setq-default indent-tabs-mode nil)
@@ -63,8 +50,6 @@
 
 (setq-default truncate-lines 0)
 
-(global-set-key [M-left] 'previous-buffer)
-(global-set-key [M-right] 'next-buffer)
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -82,6 +67,8 @@
  '(swiper-minibuffer-match-face-2 ((t :background "#bbbbbb" :weight bold)))
  '(swiper-minibuffer-match-face-3 ((t :background "#bbbbff" :weight bold)))
  '(swiper-minibuffer-match-face-4 ((t :background "#ffbbff" :weight bold))))
+
+(setq ivy-display-style 'fancy)
 
 (if (window-system)
   (progn
@@ -119,7 +106,6 @@
     (if (> space-count tab-count) (setq indent-tabs-mode nil))
     (if (> tab-count space-count) (setq indent-tabs-mode t))))
 
-(global-set-key (kbd "C-c c") 'camelscore-word-at-point)
 
 (setq c-default-style "bsd"
   c-basic-offset 4)
@@ -176,15 +162,11 @@
 (require 'multiple-cursors)
 (editorconfig-mode 1)
 
-(global-set-key (kbd "C-S-c C-S-c") 'mc/edit-lines)
-(global-set-key (kbd "C-c n") 'mc/mark-next-like-this)
-(global-set-key (kbd "C-c p") 'mc/mark-previous-like-this)
-(global-set-key (kbd "C-c A") 'mc/mark-all-like-this)
-
 (add-hook 'after-init-hook #'global-flycheck-mode)
 (require 'flycheck)
 
 (add-to-list 'load-path "~/.emacs.d/lisp")
 
 (add-to-list 'load-path (file-truename "~/.emacs_modules/.."))
+(require 'own-mappings)
 (require 'own-functions)
