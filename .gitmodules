@@ -43,3 +43,6 @@
 [submodule "ext/shut-up"]
 	path = ext/shut-up
 	url = https://github.com/cask/shut-up
+[submodule "ext/irony-mode"]
+	path = ext/irony-mode
+	url = https://github.com/Sarcasm/irony-mode.git
