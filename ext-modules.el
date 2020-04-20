@@ -40,6 +40,7 @@
   (byte-recompile-directory "~/.emacs_modules/transient" 0)
   )
 
+(byte-recompile-directory "~/.emacs_modules/company-mode" 0)
 (byte-recompile-directory "~/.emacs_modules/with-editor" 0)
 
 (require 'ag)
