@@ -41,6 +41,7 @@
   )
 
 (byte-recompile-directory "~/.emacs_modules/company-mode" 0)
+(byte-recompile-directory "~/.emacs_modules/company-irony" 0)
 (byte-recompile-directory "~/.emacs_modules/irony-mode" 0)
 (byte-recompile-directory "~/.emacs_modules/with-editor" 0)
 
