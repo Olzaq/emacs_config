@@ -30,22 +30,43 @@
 ;; default to unified diffs
 (setq diff-switches "-u")
 
-
-(add-hook 'c-mode-common-hook
-          (lambda () (subword-mode 1)))
+;; Line/Column numbers
+(global-linum-mode t)
+(setq column-number-mode t)
+;; One line scrolling
+(setq mouse-wheel-scroll-amount '(1 ((shift) . 1)))
+(setq scroll-step           1
+     scroll-conservatively 10000)
 
 (recentf-mode 1)
 (setq recentf-max-menu-items 25)
 
-;; Tab width 4
+;; Tabs and spaces
 (setq-default indent-tabs-mode nil)
 (setq-default tab-width 4)
 (setq indent-line-function 'insert-tab)
 (setq-default c-basic-offset 4)
-
 (setq-default truncate-lines 0)
+(add-hook 'before-save-hook 'delete-trailing-whitespace)
+
+(defun infer-indentation-style ()
+  ;; if our source file uses tabs, we use tabs, if spaces spaces, and if
+  ;; neither, we use the current indent-tabs-mode
+  (let ((space-count (how-many "^  " (point-min) (point-max)))
+        (tab-count (how-many "^\t" (point-min) (point-max))))
+    (if (> space-count tab-count) (setq indent-tabs-mode nil))
+    (if (> tab-count space-count) (setq indent-tabs-mode t))))
 
 
+;; C-mode setting
+(setq c-default-style "bsd"
+  c-basic-offset 4)
+
+(add-hook 'c-mode-common-hook
+          (lambda () (subword-mode 1)))
+
+
+;; Faces
 (custom-set-faces
  '(ivy-current-match ((t (:background "blue violet" :foreground "dodger blue"))))
  '(region ((t (:background "cyan" :distant-foreground "gtk_selection_fg_color"))))
@@ -53,6 +74,9 @@
  '(swiper-minibuffer-match-face-2 ((t :background "#bbbbbb" :weight bold)))
  '(swiper-minibuffer-match-face-3 ((t :background "#bbbbff" :weight bold)))
  '(swiper-minibuffer-match-face-4 ((t :background "#ffbbff" :weight bold))))
+
+(set-face-attribute 'default nil :height 102)
+(set-face-background 'fringe "LightGray")
 
 (setq ivy-display-style 'fancy)
 
@@ -62,11 +86,6 @@
       (set-frame-height (selected-frame) 50)
       (set-frame-width  (selected-frame) 110))
 )
-
-;; One line scrolling
-(setq mouse-wheel-scroll-amount '(1 ((shift) . 1)))
-(setq scroll-step           1
-     scroll-conservatively 10000)
 
 
 ;;(autoload 'matlab-mode "matlab" "Matlab Editing Mode" t)
@@ -81,26 +100,6 @@
        auto-mode-alist))
 
 (add-to-list 'auto-mode-alist '("\\.mak\\'" . makefile-mode))
-
-
-(defun infer-indentation-style ()
-  ;; if our source file uses tabs, we use tabs, if spaces spaces, and if
-  ;; neither, we use the current indent-tabs-mode
-  (let ((space-count (how-many "^  " (point-min) (point-max)))
-        (tab-count (how-many "^\t" (point-min) (point-max))))
-    (if (> space-count tab-count) (setq indent-tabs-mode nil))
-    (if (> tab-count space-count) (setq indent-tabs-mode t))))
-
-
-(setq c-default-style "bsd"
-  c-basic-offset 4)
-
-(global-linum-mode t)
-(setq column-number-mode t)
-
-(add-hook 'before-save-hook 'delete-trailing-whitespace)
-(set-face-attribute 'default nil :height 102)
-(set-face-background 'fringe "LightGray")
 
 
 (add-to-list 'load-path "~/.emacs.d/lisp")
