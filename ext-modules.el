@@ -5,6 +5,7 @@
 ;;; Code:
 
 (add-to-list 'load-path "~/.emacs_modules/ag.el")
+(add-to-list 'load-path "~/.emacs_modules/company-mode")
 (add-to-list 'load-path "~/.emacs_modules/dash.el")
 (add-to-list 'load-path "~/.emacs_modules/editorconfig-emacs")
 (add-to-list 'load-path "~/.emacs_modules/f.el")
@@ -41,6 +42,7 @@
 (byte-recompile-directory "~/.emacs_modules/with-editor" 0)
 
 (require 'ag)
+(require 'company)
 (require 'counsel)
 (require 'editorconfig)
 (require 'ido)
@@ -58,7 +60,7 @@
 
 (editorconfig-mode 1)
 (ido-mode t)
-
+(add-hook 'after-init-hook 'global-company-mode)
 
 (provide 'ext-modules)
 ;;; ext-modules.el ends here
