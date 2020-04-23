@@ -60,7 +60,7 @@
 (require 'irony)
 (require 'irony-cdb)
 (require 'multiple-cursors)
-
+(require 'server)
 (require 'swiper)
 
 (if (version< emacs-version "25")
@@ -78,6 +78,8 @@
 
 (setq org-todo-keywords
   '((sequence "TODO" "IN-PROGRESS" "WAITING" "DONE")))
+
+(unless (server-running-p) (server-start))
 
 (provide 'ext-modules)
 ;;; ext-modules.el ends here
