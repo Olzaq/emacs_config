@@ -15,6 +15,7 @@
 (add-to-list 'load-path "~/.emacs_modules/irony-mode")
 (add-to-list 'load-path "~/.emacs_modules/magit/lisp")
 (add-to-list 'load-path "~/.emacs_modules/multiple-cursors.el")
+(add-to-list 'load-path "~/.emacs_modules/org-mode/lisp")
 (add-to-list 'load-path "~/.emacs_modules/s.el")
 (add-to-list 'load-path "~/.emacs_modules/seq")
 (add-to-list 'load-path "~/.emacs_modules/shut-up")
@@ -43,6 +44,7 @@
 (byte-recompile-directory "~/.emacs_modules/company-mode" 0)
 (byte-recompile-directory "~/.emacs_modules/company-irony" 0)
 (byte-recompile-directory "~/.emacs_modules/irony-mode" 0)
+(byte-recompile-directory "~/.emacs_modules/org-mode/lisp" 0)
 (byte-recompile-directory "~/.emacs_modules/with-editor" 0)
 
 (require 'ag)
@@ -53,6 +55,7 @@
 (require 'irony)
 (require 'irony-cdb)
 (require 'multiple-cursors)
+(require 'org-loaddefs)
 (require 'swiper)
 
 (if (version< emacs-version "25")
