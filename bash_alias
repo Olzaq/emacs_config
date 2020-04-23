@@ -1,3 +1,4 @@
+# -*- mode: sh;-*-
 
 CommitDiff()
 {
@@ -9,6 +10,16 @@ git_branch()
     git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/';
 }
 
+e()
+{
+    emacsclient -n -e "(if (> (length (frame-list)) 1) 't)" 2> /dev/null | grep -q t
+    if [ "$?" = "1" ]; then
+        emacsclient -c -n -a "" "$@"
+    else
+        emacsclient -n -a "" "$@"
+    fi
+}
+
 export PS1="[\[\e[37m\]\u@\h \[\e[32m\]\w\[\e[31m\] \$(git_branch)\[\e[00m\]]$ "
 
 export EDITOR=emacs
@@ -17,8 +28,6 @@ EditChange()
 {
     git show --pretty= --name-status $1 | grep -v '^D' | cut -f2 -d$'\t' | (xargs emacs ) &
 }
-
-alias e='emacsclient --alternate-editor="" --no-wait $*'
 
 alias ll='ls -aFlq'
 
