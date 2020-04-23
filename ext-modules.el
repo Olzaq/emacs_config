@@ -4,6 +4,12 @@
 
 ;;; Code:
 
+; Make sure org is properly installed
+(add-to-list 'load-path "~/.emacs_modules/org-mode/lisp")
+(unless (file-readable-p (file-truename "~/.emacs_modules/org-mode/lisp/org-loaddefs.el"))
+  (error "Org-mode not properly installed.  Run 'make autoloads'"))
+(require 'org-loaddefs)
+
 (add-to-list 'load-path "~/.emacs_modules/ag.el")
 (add-to-list 'load-path "~/.emacs_modules/company-irony")
 (add-to-list 'load-path "~/.emacs_modules/company-mode")
@@ -15,7 +21,6 @@
 (add-to-list 'load-path "~/.emacs_modules/irony-mode")
 (add-to-list 'load-path "~/.emacs_modules/magit/lisp")
 (add-to-list 'load-path "~/.emacs_modules/multiple-cursors.el")
-(add-to-list 'load-path "~/.emacs_modules/org-mode/lisp")
 (add-to-list 'load-path "~/.emacs_modules/s.el")
 (add-to-list 'load-path "~/.emacs_modules/seq")
 (add-to-list 'load-path "~/.emacs_modules/shut-up")
@@ -47,10 +52,6 @@
 (byte-recompile-directory "~/.emacs_modules/org-mode/lisp" 0)
 (byte-recompile-directory "~/.emacs_modules/with-editor" 0)
 
-; Make sure org is properly installed
-(unless (file-readable-p (file-truename "~/.emacs_modules/org-mode/lisp/org-loaddefs.el"))
-  (error "Org-mode not properly installed.  Run 'make autoloads'"))
-
 (require 'ag)
 (require 'company)
 (require 'counsel)
@@ -59,7 +60,7 @@
 (require 'irony)
 (require 'irony-cdb)
 (require 'multiple-cursors)
-(require 'org-loaddefs)
+
 (require 'swiper)
 
 (if (version< emacs-version "25")
