@@ -9,6 +9,7 @@
 (unless (file-readable-p (file-truename "~/.emacs_modules/org-mode/lisp/org-loaddefs.el"))
   (error "Org-mode not properly installed.  Run 'make autoloads'"))
 (require 'org-loaddefs)
+(require 'org)
 
 (add-to-list 'load-path "~/.emacs_modules/ag.el")
 (add-to-list 'load-path "~/.emacs_modules/company-irony")
@@ -76,9 +77,6 @@
 (add-hook 'after-init-hook 'global-company-mode)
 (eval-after-load 'company
   '(add-to-list 'company-backends 'company-irony))
-
-(setq org-todo-keywords
-  '((sequence "TODO" "IN-PROGRESS" "WAITING" "DONE")))
 
 (unless (server-running-p) (server-start))
 
