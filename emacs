@@ -110,7 +110,4 @@
 (require 'ext-modules)
 (require 'own-mappings)
 (require 'own-functions)
-
-; org-mode settings
-(setq org-agenda-files
-      (find-lisp-find-files "~/Documents/org-mode/org-files" "\\.org$"))
+(require 'org-mode-settings)
