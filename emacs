@@ -104,10 +104,13 @@
 
 (add-to-list 'auto-mode-alist '("\\.mak\\'" . makefile-mode))
 
-
 (add-to-list 'load-path "~/.emacs.d/lisp")
 (add-to-list 'load-path (file-truename "~/.emacs_modules/.."))
 
 (require 'ext-modules)
 (require 'own-mappings)
 (require 'own-functions)
+
+; org-mode settings
+(setq org-agenda-files
+      (find-lisp-find-files "~/Documents/org-mode/org-files" "\\.org$"))

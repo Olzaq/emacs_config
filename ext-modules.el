@@ -56,6 +56,7 @@
 (require 'company)
 (require 'counsel)
 (require 'editorconfig)
+(require 'find-lisp)
 (require 'ido)
 (require 'irony)
 (require 'irony-cdb)
