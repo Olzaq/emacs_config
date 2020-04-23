@@ -76,5 +76,8 @@
 (eval-after-load 'company
   '(add-to-list 'company-backends 'company-irony))
 
+(setq org-todo-keywords
+  '((sequence "TODO" "IN-PROGRESS" "WAITING" "DONE")))
+
 (provide 'ext-modules)
 ;;; ext-modules.el ends here
