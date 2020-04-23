@@ -47,6 +47,10 @@
 (byte-recompile-directory "~/.emacs_modules/org-mode/lisp" 0)
 (byte-recompile-directory "~/.emacs_modules/with-editor" 0)
 
+; Make sure org is properly installed
+(unless (file-readable-p (file-truename "~/.emacs_modules/org-mode/lisp/org-loaddefs.el"))
+  (error "Org-mode not properly installed.  Run 'make autoloads'"))
+
 (require 'ag)
 (require 'company)
 (require 'counsel)
