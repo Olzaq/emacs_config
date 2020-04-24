@@ -55,3 +55,6 @@
 [submodule "ext/org-mode"]
 	path = ext/org-mode
 	url = https://code.orgmode.org/bzg/org-mode.git
+[submodule "ext/org-jira"]
+	path = ext/org-jira
+	url = https://github.com/ahungry/org-jira.git
