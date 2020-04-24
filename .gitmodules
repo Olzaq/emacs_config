@@ -58,3 +58,6 @@
 [submodule "ext/org-jira"]
 	path = ext/org-jira
 	url = https://github.com/ahungry/org-jira.git
+[submodule "ext/emacs-request"]
+	path = ext/emacs-request
+	url = https://github.com/tkf/emacs-request.git
