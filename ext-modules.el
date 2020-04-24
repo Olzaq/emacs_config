@@ -23,6 +23,7 @@
 (add-to-list 'load-path "~/.emacs_modules/irony-mode")
 (add-to-list 'load-path "~/.emacs_modules/magit/lisp")
 (add-to-list 'load-path "~/.emacs_modules/multiple-cursors.el")
+(add-to-list 'load-path "~/.emacs_modules/org-jira")
 (add-to-list 'load-path "~/.emacs_modules/s.el")
 (add-to-list 'load-path "~/.emacs_modules/seq")
 (add-to-list 'load-path "~/.emacs_modules/shut-up")
@@ -53,6 +54,7 @@
 ;(byte-recompile-directory "~/.emacs_modules/emacs-request" 0)
 (byte-recompile-directory "~/.emacs_modules/irony-mode" 0)
 (byte-recompile-directory "~/.emacs_modules/org-mode/lisp" 0)
+(byte-recompile-directory "~/.emacs_modules/org-jira" 0)
 (byte-recompile-directory "~/.emacs_modules/with-editor" 0)
 
 (require 'ag)
@@ -81,6 +83,9 @@
   '(add-to-list 'company-backends 'company-irony))
 
 (unless (server-running-p) (server-start))
+
+(setq jiralib-url "http://jira-host-todo/jira")
+(require 'org-jira)
 
 (provide 'ext-modules)
 ;;; ext-modules.el ends here
