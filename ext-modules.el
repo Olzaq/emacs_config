@@ -22,6 +22,7 @@
 (add-to-list 'load-path "~/.emacs_modules/hydra.git")
 (add-to-list 'load-path "~/.emacs_modules/irony-mode")
 (add-to-list 'load-path "~/.emacs_modules/magit/lisp")
+(add-to-list 'load-path "~/.emacs_modules/magit-gerrit")
 (add-to-list 'load-path "~/.emacs_modules/multiple-cursors.el")
 (add-to-list 'load-path "~/.emacs_modules/org-jira")
 (add-to-list 'load-path "~/.emacs_modules/s.el")
@@ -43,6 +44,7 @@
     (message "Skipping bytecompile...")
   (byte-recompile-directory "~/.emacs_modules/ag.el" 0)
   ;(byte-recompile-directory "~/.emacs_modules/magit/" 0)
+  (byte-recompile-directory "~/.emacs_modules/magit-gerrit" 0)
   (byte-recompile-directory "~/.emacs_modules/s.el" 0)
   (byte-recompile-directory "~/.emacs_modules/seq" 0)
   (byte-recompile-directory "~/.emacs_modules/swiper" 0)
@@ -86,6 +88,7 @@
 
 (setq jiralib-url "http://jira-host-todo/jira")
 (require 'org-jira)
+(require 'magit-gerrit)
 
 (provide 'ext-modules)
 ;;; ext-modules.el ends here
