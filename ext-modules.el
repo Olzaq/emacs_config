@@ -16,6 +16,7 @@
 (add-to-list 'load-path "~/.emacs_modules/company-mode")
 (add-to-list 'load-path "~/.emacs_modules/dash.el")
 (add-to-list 'load-path "~/.emacs_modules/editorconfig-emacs")
+(add-to-list 'load-path "~/.emacs_modules/emacs-request")
 (add-to-list 'load-path "~/.emacs_modules/f.el")
 (add-to-list 'load-path "~/.emacs_modules/flycheck")
 (add-to-list 'load-path "~/.emacs_modules/hydra.git")
@@ -49,6 +50,7 @@
 
 (byte-recompile-directory "~/.emacs_modules/company-mode" 0)
 (byte-recompile-directory "~/.emacs_modules/company-irony" 0)
+;(byte-recompile-directory "~/.emacs_modules/emacs-request" 0)
 (byte-recompile-directory "~/.emacs_modules/irony-mode" 0)
 (byte-recompile-directory "~/.emacs_modules/org-mode/lisp" 0)
 (byte-recompile-directory "~/.emacs_modules/with-editor" 0)
