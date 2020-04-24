@@ -61,3 +61,6 @@
 [submodule "ext/emacs-request"]
 	path = ext/emacs-request
 	url = https://github.com/tkf/emacs-request.git
+[submodule "ext/magit-gerrit"]
+	path = ext/magit-gerrit
+	url = https://github.com/darcylee/magit-gerrit.git
