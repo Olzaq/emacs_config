@@ -17,7 +17,7 @@
 (global-set-key (kbd "C-c g") 'counsel-git)
 (global-set-key (kbd "C-c j") 'counsel-git-grep)
 (global-set-key (kbd "C-x l") 'counsel-locate)
-(global-set-key (kbd "C-x g") 'ag-project)
+(global-set-key (kbd "C-c C-g") 'ag-project)
 (global-set-key (kbd "C-c C-r") 'ivy-resume)
 
 (global-set-key (kbd "C-S-c C-S-c") 'mc/edit-lines)
