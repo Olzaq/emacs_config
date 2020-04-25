@@ -24,6 +24,7 @@
 (global-set-key (kbd "C-c n") 'mc/mark-next-like-this)
 (global-set-key (kbd "C-c p") 'mc/mark-previous-like-this)
 (global-set-key (kbd "C-c A") 'mc/mark-all-like-this)
+(global-set-key (kbd "C-=") 'er/expand-region)
 
 (global-set-key (kbd "C-c c") 'camelscore-word-at-point)
 
