@@ -75,6 +75,8 @@
 (add-hook 'c-mode-hook 'irony-mode)
 (add-hook 'irony-mode-hook 'irony-cdb-autosetup-compile-options)
 
+(show-paren-mode t)
+
 ;; Faces
 (custom-set-faces
  '(ivy-current-match ((t (:background "blue violet" :foreground "dodger blue"))))
