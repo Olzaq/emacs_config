@@ -45,6 +45,8 @@
   (byte-recompile-directory "~/.emacs_modules/ag.el" 0)
   ;(byte-recompile-directory "~/.emacs_modules/magit/" 0)
   (byte-recompile-directory "~/.emacs_modules/magit-gerrit" 0)
+  (byte-recompile-directory "~/.emacs_modules/org-jira" 0)
+  (byte-recompile-directory "~/.emacs_modules/org-mode/lisp" 0)
   (byte-recompile-directory "~/.emacs_modules/s.el" 0)
   (byte-recompile-directory "~/.emacs_modules/seq" 0)
   (byte-recompile-directory "~/.emacs_modules/swiper" 0)
@@ -55,8 +57,6 @@
 (byte-recompile-directory "~/.emacs_modules/company-irony" 0)
 ;(byte-recompile-directory "~/.emacs_modules/emacs-request" 0)
 (byte-recompile-directory "~/.emacs_modules/irony-mode" 0)
-(byte-recompile-directory "~/.emacs_modules/org-mode/lisp" 0)
-(byte-recompile-directory "~/.emacs_modules/org-jira" 0)
 (byte-recompile-directory "~/.emacs_modules/with-editor" 0)
 
 (require 'ag)
@@ -76,6 +76,10 @@
   (add-hook 'after-init-hook #'global-flycheck-mode)
   (require 'flycheck)
   (require 'magit)
+
+  (setq jiralib-url "http://jira-host-todo/jira")
+  (require 'org-jira)
+  (require 'magit-gerrit)
 )
 
 (editorconfig-mode 1)
@@ -85,10 +89,6 @@
   '(add-to-list 'company-backends 'company-irony))
 
 (unless (server-running-p) (server-start))
-
-(setq jiralib-url "http://jira-host-todo/jira")
-(require 'org-jira)
-(require 'magit-gerrit)
 
 (provide 'ext-modules)
 ;;; ext-modules.el ends here
