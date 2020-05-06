@@ -4,8 +4,13 @@
 
 ;;; Code:
 
+(setq org-mode-files-directory "~/Documents/org-mode/org-files")
+
+(unless (file-directory-p org-mode-files-directory)
+  (make-directory org-mode-files-directory))
+
 (setq org-agenda-files
-      (find-lisp-find-files "~/Documents/org-mode/org-files" "\\.org$"))
+      (find-lisp-find-files org-mode-files-directory "\\.org$"))
 
 (setq org-todo-keywords
   '((sequence "TODO" "IN-PROGRESS" "WAITING" "DONE")))
