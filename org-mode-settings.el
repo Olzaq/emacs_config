@@ -17,7 +17,8 @@
 
 (define-key org-mode-map (kbd "M-<left>") nil)
 (define-key org-mode-map (kbd "M-<right>") nil)
-(define-key org-mode-map (kbd "ESC-<left>") 'org-metaleft)
+(define-key org-mode-map (kbd "C-c l") 'org-metaleft)
+(define-key org-mode-map (kbd "C-c r") 'org-metaright)
 
 
 (provide 'org-mode-settings)
