@@ -87,6 +87,7 @@
 (set-face-background 'fringe "LightGray")
 
 (setq ivy-display-style 'fancy)
+(setq ivy-on-del-error-function #'ignore)
 
 (if (window-system)
     (progn
