@@ -61,3 +61,6 @@
 [submodule "ext/dockerfile-mode"]
 	path = ext/dockerfile-mode
 	url = https://github.com/spotify/dockerfile-mode.git
+[submodule "ext/zygospore.el"]
+	path = ext/zygospore.el
+	url = https://github.com/LouisKottmann/zygospore.el.git
