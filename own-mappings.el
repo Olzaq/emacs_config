@@ -28,5 +28,12 @@
 
 (global-set-key (kbd "C-c c") 'camelscore-word-at-point)
 
+;; Compilation
+(global-set-key (kbd "<f5>") (lambda ()
+                               (interactive)
+                               (setq-local compilation-read-command nil)
+                               (call-interactively 'compile)))
+
+
 (provide 'own-mappings)
 ;;; own-mappings.el ends here
