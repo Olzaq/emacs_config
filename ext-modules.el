@@ -31,6 +31,7 @@
 (add-to-list 'load-path "~/.emacs_modules/transient/lisp")
 (add-to-list 'load-path "~/.emacs_modules/undercover.el")
 (add-to-list 'load-path "~/.emacs_modules/with-editor")
+(add-to-list 'load-path "~/.emacs_modules/zygospore.el")
 
 ;(byte-recompile-directory "~/.emacs_modules/dash.el" 0)
 (byte-recompile-directory "~/.emacs_modules/editorconfig-emacs" 0)
@@ -55,6 +56,7 @@
 (byte-recompile-directory "~/.emacs_modules/irony-mode" 0)
 (byte-recompile-directory "~/.emacs_modules/org-mode/lisp" 0)
 (byte-recompile-directory "~/.emacs_modules/with-editor" 0)
+(byte-recompile-directory "~/.emacs_modules/zygospore.el" 0)
 
 (require 'ag)
 (require 'company)
@@ -69,6 +71,7 @@
 (require 'multiple-cursors)
 (require 'server)
 (require 'swiper)
+(require 'zygospore)
 
 (if (version< emacs-version "25")
     (message "Skipping some modules...")

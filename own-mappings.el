@@ -28,6 +28,8 @@
 
 (global-set-key (kbd "C-c c") 'camelscore-word-at-point)
 
+(global-set-key (kbd "C-x 1") 'zygospore-toggle-delete-other-windows)
+
 ;; Compilation
 (global-set-key (kbd "<f5>") (lambda ()
                                (interactive)
