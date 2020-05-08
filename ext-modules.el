@@ -17,9 +17,11 @@
 (add-to-list 'load-path "~/.emacs_modules/dash.el")
 (add-to-list 'load-path "~/.emacs_modules/dockerfile-mode")
 (add-to-list 'load-path "~/.emacs_modules/editorconfig-emacs")
+(add-to-list 'load-path "~/.emacs_modules/emacs-async")
 (add-to-list 'load-path "~/.emacs_modules/expand-region")
 (add-to-list 'load-path "~/.emacs_modules/f.el")
 (add-to-list 'load-path "~/.emacs_modules/flycheck")
+(add-to-list 'load-path "~/.emacs_modules/helm")
 (add-to-list 'load-path "~/.emacs_modules/hydra.git")
 (add-to-list 'load-path "~/.emacs_modules/irony-mode")
 (add-to-list 'load-path "~/.emacs_modules/magit/lisp")
@@ -39,6 +41,7 @@
     (message "Skipping bytecompile: f.el")
   ;(byte-recompile-directory "~/.emacs_modules/f.el" 0)
   )
+(byte-recompile-directory "~/.emacs_modules/helm" 0)
 (byte-recompile-directory "~/.emacs_modules/hydra.git" 0)
 (if (version< emacs-version "25")
     (message "Skipping bytecompile...")
@@ -65,6 +68,8 @@
 (require 'editorconfig)
 (require 'expand-region)
 (require 'find-lisp)
+(require 'helm-config)
+(require 'helm-grep)
 (require 'ido)
 (require 'irony)
 (require 'irony-cdb)
@@ -87,6 +92,7 @@
   '(add-to-list 'company-backends 'company-irony))
 
 (add-to-list 'auto-mode-alist '("Dockerfile\\'" . dockerfile-mode))
+(helm-mode 1)
 
 (unless (server-running-p) (server-start))
 
