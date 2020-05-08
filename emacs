@@ -88,6 +88,7 @@
 
 (setq ivy-display-style 'fancy)
 (setq ivy-on-del-error-function #'ignore)
+(setq ivy-use-virtual-buffers t)
 
 (if (window-system)
     (progn
