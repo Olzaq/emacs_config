@@ -64,3 +64,6 @@
 [submodule "ext/zygospore.el"]
 	path = ext/zygospore.el
 	url = https://github.com/LouisKottmann/zygospore.el.git
+[submodule "ext/helm"]
+	path = ext/helm
+	url = https://github.com/emacs-helm/helm.git
