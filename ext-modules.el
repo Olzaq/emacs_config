@@ -48,11 +48,17 @@
 (if (version< emacs-version "25")
     (message "Skipping bytecompile...")
   (byte-recompile-directory "~/.emacs_modules/ag.el" 0)
-  ;(byte-recompile-directory "~/.emacs_modules/magit/" 0)
   (byte-recompile-directory "~/.emacs_modules/s.el" 0)
   (byte-recompile-directory "~/.emacs_modules/seq" 0)
   (byte-recompile-directory "~/.emacs_modules/swiper" 0)
   (byte-recompile-directory "~/.emacs_modules/transient" 0)
+
+  ;; Skip magit-libgit.el compilation
+  (mapc
+   (lambda (file)
+     (unless (string-match-p "magit-libgit.el" file)
+       (byte-recompile-file file nil 0)))
+   (directory-files "~/.emacs_modules/magit/lisp" t "\.el$"))
   )
 
 (byte-recompile-directory "~/.emacs_modules/company-mode" 0)
