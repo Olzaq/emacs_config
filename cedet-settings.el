@@ -20,7 +20,7 @@
 (global-semantic-idle-local-symbol-highlight-mode 1)
 (global-semantic-idle-scheduler-mode 1)
 (global-semantic-idle-completions-mode 1)
-(global-semantic-idle-summary-mode 1)
+;(global-semantic-idle-summary-mode 1)
 
 
 (defun my-semantic-hook ()
