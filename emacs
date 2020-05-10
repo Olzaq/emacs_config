@@ -109,6 +109,7 @@
 (add-to-list 'load-path (file-truename "~/.emacs_modules/.."))
 
 (require 'ext-modules)
+(require 'cedet-settings)
 (require 'own-mappings)
 (require 'own-functions)
 (require 'org-mode-settings)
