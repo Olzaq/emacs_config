@@ -82,6 +82,28 @@
           (replace-match (format (concat "%0" (int-to-string field-width) "d")
                                  answer)))))))
 
+(defun extract-to-package (name start end)
+  "Create buffer NAME.el and exctract lines between START and END."
+  (interactive (list (read-string "Package name to create: ")
+                     (region-beginning) (region-end)))
+
+  (let* ((snip (buffer-substring start end))
+        (p-name (concat name ".el"))
+        (header-lines
+         (concat
+          ";;; package --- Summary\n\n"
+          ";;; Commentary:\n\n"
+          ";;; Code:\n\n"))
+        (footer-lines
+         (concat ";;; " p-name " ends here\n")))
+    (with-current-buffer (find-file-noselect p-name)
+      (insert header-lines)
+      (insert snip)
+      (insert (format "\n(provide '%s)\n" name))
+      (insert footer-lines)
+      (save-buffer))
+    (delete-region start end)
+    (insert (format "(require '%s)\n" name))))
 
 (provide 'own-functions)
 ;;; own-functions.el ends here
