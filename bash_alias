@@ -30,6 +30,7 @@ EditChange()
 }
 
 alias ll='ls -aFlq'
+alias GenerateTags='gtags --gtagslabel=new-ctags'
 
 alias glog='git lg'
 alias gpull='git pull --rebase'
