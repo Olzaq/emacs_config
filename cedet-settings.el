@@ -26,7 +26,7 @@
 (defun my-semantic-hook ()
   "Semantic hook."
   (imenu-add-to-menubar "TAGS"))
-;(add-hook 'semantic-init-hooks 'my-semantic-hook)
+(add-hook 'semantic-init-hooks 'my-semantic-hook)
 
 (semantic-mode 1)
 
