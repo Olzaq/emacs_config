@@ -13,7 +13,7 @@
 ;(require 'semantic/bovine/gcc)
 
 (global-semanticdb-minor-mode 1)
-;(global-semantic-mru-bookmark-mode 1)
+(global-semantic-mru-bookmark-mode 1)
 (global-semantic-highlight-func-mode 1)
 (global-semantic-stickyfunc-mode 1)
 (global-semantic-decoration-mode 1)
