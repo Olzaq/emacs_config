@@ -76,9 +76,6 @@
 (require 'editorconfig)
 (require 'expand-region)
 (require 'find-lisp)
-(require 'helm-config)
-(require 'helm-gtags)
-(require 'helm-grep)
 (require 'ido)
 (require 'irony)
 (require 'irony-cdb)
@@ -101,6 +98,16 @@
   '(add-to-list 'company-backends 'company-irony))
 
 (add-to-list 'auto-mode-alist '("Dockerfile\\'" . dockerfile-mode))
+
+;; Helm setup
+
+;; this variables must be set before load helm-gtags
+(setq helm-gtags-prefix-key "\C-t")
+
+(require 'helm-config)
+(require 'helm-gtags)
+(require 'helm-grep)
+
 (helm-mode 1)
 ;;; Enable helm-gtags-mode
 (add-hook 'c-mode-hook 'helm-gtags-mode)
