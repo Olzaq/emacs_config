@@ -39,6 +39,8 @@
 (add-hook 'c-mode-hook 'alexott/cedet-hook)
 (add-hook 'c++-mode-hook 'alexott/cedet-hook)
 
+(add-hook 'speedbar-load-hook (lambda () (require 'semantic/sb)))
+
 ;; Enable EDE only in C/C++
 (require 'ede)
 (global-ede-mode t)
