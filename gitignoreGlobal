@@ -1,1 +1,5 @@
 *.elc
+
+GPATH
+GRTAGS
+GTAGS
