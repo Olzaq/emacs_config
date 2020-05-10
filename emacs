@@ -108,7 +108,11 @@
 (add-to-list 'load-path "~/.emacs.d/lisp")
 (add-to-list 'load-path (file-truename "~/.emacs_modules/.."))
 
+(require 'server)
+(unless (server-running-p) (server-start))
+
 (require 'ext-modules)
+(require 'helm-settings)
 (require 'cedet-settings)
 (require 'own-mappings)
 (require 'own-functions)

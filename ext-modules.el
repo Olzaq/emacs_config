@@ -80,7 +80,6 @@
 (require 'irony)
 (require 'irony-cdb)
 (require 'multiple-cursors)
-(require 'server)
 (require 'swiper)
 (require 'zygospore)
 
@@ -98,10 +97,6 @@
   '(add-to-list 'company-backends 'company-irony))
 
 (add-to-list 'auto-mode-alist '("Dockerfile\\'" . dockerfile-mode))
-
-(require 'helm-settings)
-
-(unless (server-running-p) (server-start))
 
 (provide 'ext-modules)
 ;;; ext-modules.el ends here
