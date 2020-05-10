@@ -55,23 +55,6 @@
     (if (> tab-count space-count) (setq indent-tabs-mode t))))
 
 
-;; C-mode setting
-(defconst bsd-style-extend
-  '("bsd"
-    (c-basic-offset 4)
-    (c-offsets-alist . ((innamespace . [0])))))
-
-(c-add-style "bsd-style-extend" bsd-style-extend)
-
-(setq c-default-style "bsd-style-extend")
-
-(add-hook 'c-mode-common-hook
-          (lambda () (subword-mode 1)))
-
-(add-hook 'c++-mode-hook 'irony-mode)
-(add-hook 'c-mode-hook 'irony-mode)
-(add-hook 'irony-mode-hook 'irony-cdb-autosetup-compile-options)
-
 (show-paren-mode t)
 
 ;; Faces
@@ -114,6 +97,7 @@
 (require 'ext-modules)
 (require 'helm-settings)
 (require 'cedet-settings)
+(require 'c-and-cpp-mode)
 (require 'own-mappings)
 (require 'own-functions)
 (require 'org-mode-settings)
