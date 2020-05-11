@@ -105,5 +105,20 @@
     (delete-region start end)
     (insert (format "(require '%s)\n" name))))
 
+(defun switch-to-minibuffer-window ()
+  "Switch to minibuffer window (if active)."
+  (interactive)
+  (when (active-minibuffer-window)
+    (select-frame-set-input-focus (window-frame (active-minibuffer-window)))
+    (select-window (active-minibuffer-window))))
+
+(defun stop-using-minibuffer ()
+  "Kill the minibuffer."
+  (when (and (>= (recursion-depth) 1) (active-minibuffer-window))
+    (abort-recursive-edit)))
+
+;(add-hook 'mouse-leave-buffer-hook 'stop-using-minibuffer)
+
+
 (provide 'own-functions)
 ;;; own-functions.el ends here

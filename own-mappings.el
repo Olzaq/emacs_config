@@ -41,6 +41,7 @@
                                (setq-local compilation-read-command nil)
                                (call-interactively 'compile)))
 
+(global-set-key (kbd "<f7>") 'switch-to-minibuffer-window)
 
 ;; Helm
 (global-set-key (kbd "C-c h") 'helm-command-prefix)
