@@ -94,7 +94,7 @@
     (message "Skipping some modules...")
   (add-hook 'after-init-hook #'global-flycheck-mode)
   (require 'flycheck)
-  (require 'magit)
+  (require 'git-settings)
 )
 
 (set-variable 'rtags-path (file-truename "~/.emacs_modules/rtags/bin"))
