@@ -30,6 +30,7 @@ EditChange()
 }
 
 alias ll='ls -aFlq'
+alias CmakeExport='cmake -DCMAKE_EXPORT_COMPILE_COMMANDS=1'
 alias GenerateTags='gtags --gtagslabel=new-ctags'
 
 alias glog='git lg'
