@@ -73,3 +73,6 @@
 [submodule "ext/helm-gtags"]
 	path = ext/helm-gtags
 	url = https://github.com/emacsorphanage/helm-gtags.git
+[submodule "ext/cmake-ide"]
+	path = ext/cmake-ide
+	url = https://github.com/atilaneves/cmake-ide.git
