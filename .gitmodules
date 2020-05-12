@@ -76,3 +76,6 @@
 [submodule "ext/cmake-ide"]
 	path = ext/cmake-ide
 	url = https://github.com/atilaneves/cmake-ide.git
+[submodule "ext/rtags"]
+	path = ext/rtags
+	url = https://github.com/Andersbakken/rtags.git
