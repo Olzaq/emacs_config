@@ -29,6 +29,7 @@
 (add-to-list 'load-path "~/.emacs_modules/levenshtein")
 (add-to-list 'load-path "~/.emacs_modules/magit/lisp")
 (add-to-list 'load-path "~/.emacs_modules/multiple-cursors.el")
+(add-to-list 'load-path "~/.emacs_modules/rtags/src")
 (add-to-list 'load-path "~/.emacs_modules/s.el")
 (add-to-list 'load-path "~/.emacs_modules/seq")
 (add-to-list 'load-path "~/.emacs_modules/shut-up")
@@ -84,6 +85,7 @@
 (require 'ido)
 (require 'irony)
 (require 'irony-cdb)
+(require 'rtags)
 (require 'multiple-cursors)
 (require 'swiper)
 (require 'zygospore)
@@ -95,6 +97,7 @@
   (require 'magit)
 )
 
+(set-variable 'rtags-path (file-truename "~/.emacs_modules/rtags/bin"))
 (cmake-ide-setup)
 (editorconfig-mode 1)
 ;(ido-mode t)
