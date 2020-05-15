@@ -7,7 +7,7 @@
 (setq org-mode-files-directory "~/Documents/org-mode/org-files")
 
 (unless (file-directory-p org-mode-files-directory)
-  (make-directory org-mode-files-directory))
+  (make-directory org-mode-files-directory t))
 
 (setq org-agenda-files
       (find-lisp-find-files org-mode-files-directory "\\.org$"))
