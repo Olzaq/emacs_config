@@ -4,15 +4,15 @@
 
 ;;; Code:
 
-(setq org-mode-files-directory "~/Documents/org-mode/org-files")
+(defvar org-mode-files-directory "~/Documents/org-mode/org-files")
 
 (unless (file-directory-p org-mode-files-directory)
   (make-directory org-mode-files-directory t))
 
-(setq org-agenda-files
+(defvar org-agenda-files
       (find-lisp-find-files org-mode-files-directory "\\.org$"))
 
-(setq org-todo-keywords
+(defvar org-todo-keywords
   '((sequence "TODO" "IN-PROGRESS" "WAITING" "DONE")))
 
 (define-key org-mode-map (kbd "M-<left>") nil)
