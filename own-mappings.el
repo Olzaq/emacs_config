@@ -41,6 +41,9 @@
                                (setq-local compilation-read-command nil)
                                (call-interactively 'compile)))
 
+(global-set-key (kbd "<f6>") (lambda ()
+                               (interactive)
+                               (find-file-existing (concat org-mode-files-directory "/task_list.org"))))
 (global-set-key (kbd "<f7>") 'switch-to-minibuffer-window)
 
 ;; Helm
