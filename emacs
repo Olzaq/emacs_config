@@ -7,7 +7,11 @@
 (when (< emacs-major-version 27)
   (package-initialize))
 
-; disable some defaults
+;; detect if running in termux
+(defconst termux-data-path "/data/data/com.termux")
+(defvar running-in-termux (file-directory-p termux-data-path))
+
+;; disable some defaults
 (setq backup-inhibited t)
 (setq inhibit-startup-screen t)
 (setq case-replace nil)
