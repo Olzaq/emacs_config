@@ -90,14 +90,6 @@
   (require 'rtags)
   (require 'multiple-cursors)
   (require 'swiper)
-  (require 'zygospore)
-
-  (if (version< emacs-version "25")
-      (message "Skipping some modules...")
-    (add-hook 'after-init-hook #'global-flycheck-mode)
-    (require 'flycheck)
-    (require 'git-settings)
-    )
 
   (set-variable 'rtags-path (file-truename "~/.emacs_modules/rtags/bin"))
   (cmake-ide-setup)
@@ -114,7 +106,16 @@
 )
 
 (require 'ido)
-(if running-in-termux (ido-mode t))
+(require 'zygospore)
+;;(if running-in-termux (ido-mode t))
+
+(if (version< emacs-version "25")
+      (message "Skipping some modules...")
+  (unless running-in-termux
+    (require 'flycheck)
+    (add-hook 'after-init-hook #'global-flycheck-mode))
+    (require 'git-settings))
+
 
 (provide 'ext-modules)
 ;;; ext-modules.el ends here
