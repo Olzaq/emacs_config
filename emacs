@@ -95,13 +95,17 @@
 (add-to-list 'load-path "~/.emacs.d/lisp")
 (add-to-list 'load-path (file-truename "~/.emacs_modules/.."))
 
-(require 'server)
-(unless (server-running-p) (server-start))
+(unless running-in-termux
+  (require 'server)
+  (unless (server-running-p) (server-start)))
 
 (require 'ext-modules)
-(require 'helm-settings)
-(require 'cedet-settings)
-(require 'c-and-cpp-mode)
+
+(unless running-in-termux
+  (require 'helm-settings)
+  (require 'cedet-settings)
+  (require 'c-and-cpp-mode))
+
 (require 'own-mappings)
 (require 'own-functions)
 (require 'org-mode-settings)
