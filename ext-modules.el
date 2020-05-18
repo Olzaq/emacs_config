@@ -102,7 +102,6 @@
   (set-variable 'rtags-path (file-truename "~/.emacs_modules/rtags/bin"))
   (cmake-ide-setup)
   (editorconfig-mode 1)
-  ;;(ido-mode t)
   (add-hook 'after-init-hook 'global-company-mode)
   (eval-after-load 'company
     '(add-to-list 'company-backends 'company-irony))
@@ -115,6 +114,7 @@
 )
 
 (require 'ido)
+(if running-in-termux (ido-mode t))
 
 (provide 'ext-modules)
 ;;; ext-modules.el ends here
