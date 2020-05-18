@@ -46,13 +46,13 @@
                                (find-file-existing (concat org-mode-files-directory "/task_list.org"))))
 (global-set-key (kbd "<f7>") 'switch-to-minibuffer-window)
 
-(unless running-in-termux
-  ;; Helm
-  (global-set-key (kbd "C-c h") 'helm-command-prefix)
-  (global-set-key (kbd "M-x") 'helm-M-x)
-  (global-set-key (kbd "M-y") 'helm-show-kill-ring)
-  (global-set-key (kbd "C-x b") 'helm-buffers-list)
-  (add-to-list 'helm-completing-read-handlers-alist '(find-file . ido)))
+
+;; Helm
+(global-set-key (kbd "C-c h") 'helm-command-prefix)
+(global-set-key (kbd "M-x") 'helm-M-x)
+(global-set-key (kbd "M-y") 'helm-show-kill-ring)
+(global-set-key (kbd "C-x b") 'helm-buffers-list)
+(add-to-list 'helm-completing-read-handlers-alist '(find-file . ido))
 
 (provide 'own-mappings)
 ;;; own-mappings.el ends here

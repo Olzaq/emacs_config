@@ -100,9 +100,9 @@
   (unless (server-running-p) (server-start)))
 
 (require 'ext-modules)
+(require 'helm-settings)
 
 (unless running-in-termux
-  (require 'helm-settings)
   (require 'cedet-settings)
   (require 'c-and-cpp-mode))
 
