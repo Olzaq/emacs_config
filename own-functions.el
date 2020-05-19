@@ -154,6 +154,12 @@
   ;; put the point in the lowest line and return
   (next-line arg))
 
+(defun ask-before-closing ()
+  "Close only if y was pressed."
+  (interactive)
+  (if (y-or-n-p (format "Are you sure you want to close this frame? "))
+      (save-buffers-kill-emacs)
+    (message nil)))
 
 (provide 'own-functions)
 ;;; own-functions.el ends here
