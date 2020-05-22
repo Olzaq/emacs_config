@@ -42,9 +42,15 @@
                                (setq-local compilation-read-command nil)
                                (call-interactively 'compile)))
 
+(fset 'own-add-checkbox
+   (lambda (&optional arg) "Keyboard macro." (interactive "p") (kmacro-exec-ring-item (quote ("- " 0 "%d")) arg)))
+
 (global-set-key (kbd "<f6>") (lambda ()
                                (interactive)
-                               (find-file-existing (concat org-mode-files-directory "/task_list.org"))))
+                               (if (string-match "org$" (buffer-name))
+                                   (own-add-checkbox)
+                                 (find-file-existing (concat org-mode-files-directory "/task_list.org")))))
+
 (global-set-key (kbd "<f7>") 'switch-to-minibuffer-window)
 
 
