@@ -49,6 +49,7 @@
 (setq-default c-basic-offset 4)
 (setq-default truncate-lines 0)
 (add-hook 'before-save-hook 'delete-trailing-whitespace)
+(add-hook 'after-save-hook #'executable-make-buffer-file-executable-if-script-p)
 
 (defun infer-indentation-style ()
   ;; if our source file uses tabs, we use tabs, if spaces spaces, and if
