@@ -11,6 +11,19 @@
 (defconst termux-data-path "/data/data/com.termux")
 (defvar running-in-termux (file-directory-p termux-data-path))
 
+;; detect if running in docker
+(defun check-if-running-in-docker ()
+  (let ((orig-buffer (current-buffer))
+        (is-running-in-docker nil))
+    (switch-to-buffer (make-temp-name "docker-check-output"))
+    (shell-command "cat /proc/1/cgroup" t)
+    (setq is-running-in-docker (search-forward "docker" nil t))
+    (kill-buffer)
+    (switch-to-buffer orig-buffer)
+    is-running-in-docker))
+
+(defvar running-in-docker (check-if-running-in-docker))
+
 ;; disable some defaults
 (setq backup-inhibited t)
 (setq inhibit-startup-screen t)
