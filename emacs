@@ -24,6 +24,10 @@
 
 (defvar running-in-docker (check-if-running-in-docker))
 
+(if running-in-docker
+    (unless (= (shell-command "ssh-add -l") 0)
+      (error "Start ssh-agent first")))
+
 ;; disable some defaults
 (setq backup-inhibited t)
 (setq inhibit-startup-screen t)
