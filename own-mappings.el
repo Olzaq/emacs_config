@@ -53,6 +53,8 @@
 
 (global-set-key (kbd "<f7>") 'switch-to-minibuffer-window)
 
+;; Company
+(global-set-key (kbd "C-M-&") 'company-complete-common-or-cycle)
 
 ;; Helm
 (global-set-key (kbd "C-c h") 'helm-command-prefix)
