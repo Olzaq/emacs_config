@@ -122,7 +122,8 @@
 
 (unless running-in-termux
   (require 'cedet-settings)
-  (require 'c-and-cpp-mode))
+  (require 'c-and-cpp-mode)
+  (require 'gdb-settings))
 
 (require 'own-mappings)
 (require 'own-functions)
