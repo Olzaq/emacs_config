@@ -12,7 +12,7 @@
 (defvar org-agenda-files
       (find-lisp-find-files org-mode-files-directory "\\.org$"))
 
-(defvar org-todo-keywords
+(setq org-todo-keywords
   '((sequence "TODO" "IN-PROGRESS" "WAITING" "DONE")))
 
 (define-key org-mode-map (kbd "M-<left>") nil)
