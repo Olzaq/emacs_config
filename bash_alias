@@ -37,6 +37,7 @@ alias glog='git lg'
 alias gpull='git pull --rebase'
 alias gpush='git push'
 alias gsno='git show --name-only'
+alias graiseDead="git reset 'HEAD@{1}'"
 
 alias groot='cd $(git rev-parse --show-toplevel 2>>/dev/null || echo .)'
 alias GRoot='cd $( rdir=`git rev-parse --show-superproject-working-tree 2>>/dev/null` ; if [ ! -z ${rdir} ]; then echo ${rdir}; else echo . ; fi || echo .)'
