@@ -51,7 +51,11 @@
                                    (own-add-checkbox)
                                  (find-file-existing (concat org-mode-files-directory "/task_list.org")))))
 
-(global-set-key (kbd "<f7>") 'switch-to-minibuffer-window)
+(global-set-key (kbd "<f7>") (lambda ()
+                               (interactive)
+                               (if (minibufferp)
+                                   (stop-using-minibuffer)
+                                 (switch-to-minibuffer-window))))
 
 ;; Company
 (global-set-key (kbd "C-M-&") 'company-complete-common-or-cycle)
