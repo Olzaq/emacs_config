@@ -29,6 +29,7 @@
 (add-to-list 'load-path "~/.emacs_modules/irony-mode")
 (add-to-list 'load-path "~/.emacs_modules/levenshtein")
 (add-to-list 'load-path "~/.emacs_modules/magit/lisp")
+(add-to-list 'load-path "~/.emacs_modules/move-text")
 (add-to-list 'load-path "~/.emacs_modules/multiple-cursors.el")
 (add-to-list 'load-path "~/.emacs_modules/rtags/src")
 (add-to-list 'load-path "~/.emacs_modules/s.el")
@@ -73,6 +74,7 @@
   (byte-recompile-directory "~/.emacs_modules/expand-region" 0)
   (byte-recompile-directory "~/.emacs_modules/irony-mode" 0)
   (byte-recompile-directory "~/.emacs_modules/levenshtein" 0)
+  (byte-recompile-directory "~/.emacs_modules/move-text" 0)
   (byte-recompile-directory "~/.emacs_modules/org-mode/lisp" 0)
   (byte-recompile-directory "~/.emacs_modules/with-editor" 0)
   (byte-recompile-directory "~/.emacs_modules/zygospore.el" 0)
@@ -88,6 +90,7 @@
   (require 'irony)
   (require 'irony-cdb)
   (require 'rtags)
+  (require 'move-text)
   (require 'multiple-cursors)
   (require 'swiper)
 
@@ -97,6 +100,7 @@
   (add-hook 'after-init-hook 'global-company-mode)
   (eval-after-load 'company
     '(add-to-list 'company-backends 'company-irony))
+  (move-text-default-bindings)
 
   (add-to-list 'auto-mode-alist '("Dockerfile\\'" . dockerfile-mode))
 
