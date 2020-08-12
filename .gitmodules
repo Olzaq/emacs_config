@@ -79,3 +79,6 @@
 [submodule "ext/rtags"]
 	path = ext/rtags
 	url = https://github.com/Andersbakken/rtags.git
+[submodule "ext/move-text"]
+	path = ext/move-text
+	url = https://github.com/emacsfodder/move-text.git
