@@ -91,3 +91,6 @@
 [submodule "ext/markdown-mode"]
 	path = ext/markdown-mode
 	url = https://github.com/jrblevin/markdown-mode.git
+[submodule "ext/lsp-mode"]
+	path = ext/lsp-mode
+	url = https://github.com/emacs-lsp/lsp-mode.git
