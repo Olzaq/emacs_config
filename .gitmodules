@@ -94,3 +94,6 @@
 [submodule "ext/lsp-mode"]
 	path = ext/lsp-mode
 	url = https://github.com/emacs-lsp/lsp-mode.git
+[submodule "ext/lsp-ui"]
+	path = ext/lsp-ui
+	url = https://github.com/emacs-lsp/lsp-ui.git
