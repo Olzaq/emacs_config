@@ -14,6 +14,7 @@
 (add-to-list 'load-path "~/.emacs_modules/ag.el")
 (add-to-list 'load-path "~/.emacs_modules/cmake-ide")
 (add-to-list 'load-path "~/.emacs_modules/company-irony")
+(add-to-list 'load-path "~/.emacs_modules/company-lsp")
 (add-to-list 'load-path "~/.emacs_modules/company-mode")
 (add-to-list 'load-path "~/.emacs_modules/csv-mode")
 (add-to-list 'load-path "~/.emacs_modules/dash.el")
@@ -74,6 +75,7 @@
     )
 
   ;;(byte-recompile-directory "~/.emacs_modules/cmake-ide" 0)
+  (byte-recompile-directory "~/.emacs_modules/company-lsp" 0)
   (byte-recompile-directory "~/.emacs_modules/company-mode" 0)
   (byte-recompile-directory "~/.emacs_modules/company-irony" 0)
   (byte-recompile-directory "~/.emacs_modules/csv-mode" 0)
