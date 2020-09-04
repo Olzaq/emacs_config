@@ -97,3 +97,6 @@
 [submodule "ext/lsp-ui"]
 	path = ext/lsp-ui
 	url = https://github.com/emacs-lsp/lsp-ui.git
+[submodule "ext/company-lsp"]
+	path = ext/company-lsp
+	url = https://github.com/tigersoldier/company-lsp.git
