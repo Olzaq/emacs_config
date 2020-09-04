@@ -79,6 +79,7 @@
   (byte-recompile-directory "~/.emacs_modules/company-mode" 0)
   (byte-recompile-directory "~/.emacs_modules/company-irony" 0)
   (byte-recompile-directory "~/.emacs_modules/csv-mode" 0)
+  (byte-recompile-directory "~/.emacs_modules/emacs-async" 0)
   (byte-recompile-directory "~/.emacs_modules/expand-region" 0)
   (byte-recompile-directory "~/.emacs_modules/irony-mode" 0)
   (byte-recompile-directory "~/.emacs_modules/levenshtein" 0)
