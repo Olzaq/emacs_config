@@ -51,10 +51,7 @@
 (unless running-in-termux
   ;;(byte-recompile-directory "~/.emacs_modules/dash.el" 0)
   (byte-recompile-directory "~/.emacs_modules/editorconfig-emacs" 0)
-  (if (version< emacs-version "26")
-      (message "Skipping bytecompile: f.el")
-    ;;(byte-recompile-directory "~/.emacs_modules/f.el" 0)
-    )
+  (byte-recompile-file "~/.emacs_modules/f.el/f.el" nil 0)
   (byte-recompile-directory "~/.emacs_modules/helm" 0)
   (byte-recompile-directory "~/.emacs_modules/helm-gtags" 0)
   (byte-recompile-file "~/.emacs_modules/ht.el/ht.el" nil 0)
