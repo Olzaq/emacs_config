@@ -11,6 +11,14 @@
 (require 'org-loaddefs)
 (require 'org)
 
+(defun byte-recompile-dir-exclude (dir pattern)
+  "Bytecompile files in DIR unless match PATTERN."
+  (mapc
+   (lambda (file)
+     (unless (string-match-p pattern file)
+       (byte-recompile-file file nil 0)))
+   (directory-files dir t "\.el$")))
+
 (add-to-list 'load-path "~/.emacs_modules/ag.el")
 (add-to-list 'load-path "~/.emacs_modules/cmake-ide")
 (add-to-list 'load-path "~/.emacs_modules/company-irony")
