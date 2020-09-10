@@ -57,7 +57,7 @@
     )
   (byte-recompile-directory "~/.emacs_modules/helm" 0)
   (byte-recompile-directory "~/.emacs_modules/helm-gtags" 0)
-  ;;(byte-recompile-directory "~/.emacs_modules/ht.el" 0)
+  (byte-recompile-file "~/.emacs_modules/ht.el/ht.el" nil 0)
   (byte-recompile-directory "~/.emacs_modules/hydra.git" 0)
   (if (version< emacs-version "25")
       (message "Skipping bytecompile...")
