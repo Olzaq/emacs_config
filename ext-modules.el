@@ -11,7 +11,7 @@
 (require 'org-loaddefs)
 (require 'org)
 
-(defun byte-recompile-dir-exclude (dir pattern)
+(defun byte-recompile-dir-exclude (dir &optional pattern)
   "Bytecompile files in DIR unless match PATTERN."
   (mapc
    (lambda (file)
@@ -73,12 +73,7 @@
     (byte-recompile-directory "~/.emacs_modules/transient" 0)
 
     ;; Skip magit-libgit.el compilation
-    (mapc
-     (lambda (file)
-       (unless (string-match-p "magit-libgit.el" file)
-         (byte-recompile-file file nil 0)))
-     (directory-files "~/.emacs_modules/magit/lisp" t "\.el$"))
-    )
+    (byte-recompile-dir-exclude "~/.emacs_modules/magit/lisp" "magit-libgit.el"))
 
   ;;(byte-recompile-directory "~/.emacs_modules/cmake-ide" 0)
   (byte-recompile-directory "~/.emacs_modules/company-lsp" 0)
