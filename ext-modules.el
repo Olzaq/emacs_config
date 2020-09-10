@@ -15,7 +15,8 @@
   "Bytecompile files in DIR unless match PATTERN."
   (mapc
    (lambda (file)
-     (unless (string-match-p pattern file)
+     (unless (if pattern
+                 (string-match-p pattern file))
        (byte-recompile-file file nil 0)))
    (directory-files dir t "\.el$")))
 
@@ -57,7 +58,7 @@
 (add-to-list 'load-path "~/.emacs_modules/zygospore.el")
 
 (unless running-in-termux
-  ;;(byte-recompile-directory "~/.emacs_modules/dash.el" 0)
+  (byte-recompile-dir-exclude "~/.emacs_modules/dash.el")
   (byte-recompile-directory "~/.emacs_modules/editorconfig-emacs" 0)
   (byte-recompile-file "~/.emacs_modules/f.el/f.el" nil 0)
   (byte-recompile-directory "~/.emacs_modules/helm" 0)
