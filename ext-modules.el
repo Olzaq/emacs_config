@@ -78,7 +78,7 @@
     ;; Skip magit-libgit.el compilation
     (byte-recompile-dir-exclude "~/.emacs_modules/magit/lisp" "magit-libgit.el"))
 
-  ;;(byte-recompile-directory "~/.emacs_modules/cmake-ide" 0)
+  (byte-recompile-dir-exclude "~/.emacs_modules/cmake-ide" "test")
   (byte-recompile-directory "~/.emacs_modules/company-lsp" 0)
   (byte-recompile-directory "~/.emacs_modules/company-mode" 0)
   (byte-recompile-directory "~/.emacs_modules/company-irony" 0)
@@ -89,7 +89,7 @@
   (byte-recompile-directory "~/.emacs_modules/irony-mode" 0)
   (byte-recompile-directory "~/.emacs_modules/levenshtein" 0)
   ;;(byte-recompile-directory "~/.emacs_modules/lsp-mode" 0)
-  ;;(byte-recompile-directory "~/.emacs_modules/lsp-ui" 0)
+  (byte-recompile-dir-exclude "~/.emacs_modules/lsp-ui" "test")
   (byte-recompile-directory "~/.emacs_modules/markdown-mode" 0)
   (byte-recompile-directory "~/.emacs_modules/move-text" 0)
   (byte-recompile-directory "~/.emacs_modules/org-mode/lisp" 0)
