@@ -57,6 +57,7 @@
 (add-to-list 'load-path "~/.emacs_modules/undercover.el")
 (add-to-list 'load-path "~/.emacs_modules/with-editor")
 (add-to-list 'load-path "~/.emacs_modules/xterm-color")
+(add-to-list 'load-path "~/.emacs_modules/yasnippet")
 (add-to-list 'load-path "~/.emacs_modules/zygospore.el")
 
 (unless running-in-termux
@@ -115,6 +116,7 @@
   (require 'multiple-cursors)
   (require 'swiper)
   (require 'xterm-color)
+  (require 'yasnippet)
 
   (set-variable 'rtags-path (file-truename "~/.emacs_modules/rtags/bin"))
   (cmake-ide-setup)
