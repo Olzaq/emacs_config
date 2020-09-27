@@ -4,6 +4,10 @@
 
 ;;; Code:
 
+(eval-when-compile
+  (add-to-list 'load-path "~/.emacs_modules/use-package")
+  (require 'use-package))
+
 ; Make sure org is properly installed
 (add-to-list 'load-path "~/.emacs_modules/org-mode/lisp")
 (unless (file-readable-p (file-truename "~/.emacs_modules/org-mode/lisp/org-loaddefs.el"))
