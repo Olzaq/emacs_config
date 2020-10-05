@@ -1,5 +1,8 @@
 *.elc
 
+.emacs_desktop
+.gdb_history
+
 GPATH
 GRTAGS
 GTAGS
