@@ -1,6 +1,6 @@
 *.elc
 
-.emacs_desktop
+.emacs.desktop
 .gdb_history
 
 GPATH
