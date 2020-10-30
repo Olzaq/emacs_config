@@ -33,6 +33,8 @@ alias ll='ls -aFlq'
 alias CmakeExport='cmake -DCMAKE_EXPORT_COMPILE_COMMANDS=1'
 alias GenerateTags='gtags --gtagslabel=new-ctags'
 
+alias stopEmacs="pkill -SIGUSR2 -i emacs ; emacsclient -e '(setq debug-on-quit nil)'"
+
 alias glog='git lg'
 alias gpull='git pull --rebase'
 alias gpush='git push'
