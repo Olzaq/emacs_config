@@ -22,7 +22,7 @@ e()
 
 export PS1="[\[\e[37m\]\u@\h \[\e[32m\]\w\[\e[31m\] \$(git_branch)\[\e[00m\]]$ "
 
-export EDITOR=emacs
+export EDITOR='emacsclient -c -a "" "$@" 2> /dev/null'
 
 EditChange()
 {
