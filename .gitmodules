@@ -103,3 +103,6 @@
 [submodule "ext/emacs-ccls"]
 	path = ext/emacs-ccls
 	url = https://github.com/MaskRay/emacs-ccls.git
+[submodule "ext/magit-delta"]
+	path = ext/magit-delta
+	url = https://github.com/dandavison/magit-delta.git

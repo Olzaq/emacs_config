@@ -43,6 +43,7 @@
 (add-to-list 'load-path "~/.emacs_modules/lsp-mode")
 (add-to-list 'load-path "~/.emacs_modules/lsp-ui")
 (add-to-list 'load-path "~/.emacs_modules/magit/lisp")
+(add-to-list 'load-path "~/.emacs_modules/magit-delta")
 (add-to-list 'load-path "~/.emacs_modules/markdown-mode")
 (add-to-list 'load-path "~/.emacs_modules/move-text")
 (add-to-list 'load-path "~/.emacs_modules/multiple-cursors.el")
