@@ -94,6 +94,7 @@
   (byte-recompile-directory "~/.emacs_modules/org-mode/lisp" 0)
   (byte-recompile-directory "~/.emacs_modules/spinner" 0)
   (byte-recompile-directory "~/.emacs_modules/with-editor" 0)
+  (byte-recompile-directory "~/.emacs_modules/xterm-color" 0)
   (byte-recompile-directory "~/.emacs_modules/zygospore.el" 0)
 
   (require 'ag)
@@ -112,6 +113,7 @@
   (require 'move-text)
   (require 'multiple-cursors)
   (require 'swiper)
+  (require 'xterm-color)
 
   (set-variable 'rtags-path (file-truename "~/.emacs_modules/rtags/bin"))
   (cmake-ide-setup)
