@@ -56,6 +56,7 @@
 (add-to-list 'load-path "~/.emacs_modules/transient/lisp")
 (add-to-list 'load-path "~/.emacs_modules/undercover.el")
 (add-to-list 'load-path "~/.emacs_modules/with-editor")
+(add-to-list 'load-path "~/.emacs_modules/xterm-color")
 (add-to-list 'load-path "~/.emacs_modules/zygospore.el")
 
 (unless running-in-termux
