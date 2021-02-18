@@ -31,6 +31,8 @@
   (mapconcat 'capitalize (split-name s) ""))
 (defun underscore (s) "Convert S to under_score_style."
   (mapconcat 'downcase   (split-name s) "_"))
+(defun CAPITAL (s) "Convert S to CAPITAL_STYLE."
+  (mapconcat 'upcase   (split-name s) "_"))
 (defun dasherize  (s) "Convert S to dash-style."
   (mapconcat 'downcase   (split-name s) "-"))
 (defun colonize   (s) "Convert S to Scope::Resolution::Style."
@@ -48,11 +50,12 @@
 
 (defun camelscore (s)
   "Select next matching style for given string S."
-  (cond ((string-match-p "\\(?:[a-z]+_\\)+[a-z]+" s)	        (dasherize  s))
-        ((string-match-p "\\(?:[a-z]+-\\)+[a-z]+" s)	        (camelCase  s))
-	    ((string-match-p "\\b[a-z]+\\(?:[A-Z][a-z]+\\)+" s)	    (CamelCase  s))
-	    ((string-match-p "\\(?:[A-Z][a-z]+::\\)+[A-Z][a-z]+" s)	(underscore s))
-        ((string-match-p "\\(?:[A-Z][a-z]+\\)+$"  s)	        (colonize   s)) ))
+  (cond ((string-match-p "\\(?:[a-z]+_\\)+[a-z]+" s)            (dasherize  s))
+        ((string-match-p "\\(?:[a-z]+-\\)+[a-z]+" s)            (camelCase  s))
+	    ((string-match-p "\\b[a-z]+\\(?:[A-Z][a-z]+\\)+" s)     (CamelCase  s))
+	    ((string-match-p "\\(?:[A-Z][a-z]+::\\)+[A-Z][a-z]+" s) (underscore s))
+        ((string-match-p "\\(?:[A-Z][a-z]+\\)+$"  s)            (CAPITAL    s))
+        ((string-match-p "\\(?:[A-Z]+\\)+$"  s)                 (colonize   s)) ))
 
 (defun prompt-for-insert ()
   "Prompt for inserting text."
