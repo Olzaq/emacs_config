@@ -5,7 +5,7 @@
 ;;; Code:
 
 (require 'magit)
-(require 'magit-delta)
+;;(require 'magit-delta)
 
 (provide 'git-settings)
 ;;; git-settings.el ends here
