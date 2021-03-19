@@ -157,6 +157,11 @@
   ;; put the point in the lowest line and return
   (next-line arg))
 
+(defun show-file-name-and-path ()
+  "Show the full path file name in the minibuffer."
+  (interactive)
+  (message (buffer-file-name)))
+
 (defun ask-before-closing ()
   "Close only if y was pressed."
   (interactive)
