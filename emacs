@@ -113,7 +113,7 @@
 (add-to-list 'load-path "~/.emacs.d/lisp")
 (add-to-list 'load-path (file-truename "~/.emacs_modules/.."))
 
-(defconst use-lsp-mode t)
+(defconst use-lsp-mode nil)
 
 (unless running-in-termux
   (require 'server)
