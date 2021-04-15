@@ -25,7 +25,6 @@
    (directory-files dir t "\.el$")))
 
 (add-to-list 'load-path "~/.emacs_modules/ag.el")
-(add-to-list 'load-path "~/.emacs_modules/cmake-ide")
 (add-to-list 'load-path "~/.emacs_modules/company-irony")
 (add-to-list 'load-path "~/.emacs_modules/company-lsp")
 (add-to-list 'load-path "~/.emacs_modules/company-mode")
@@ -51,7 +50,6 @@
 (add-to-list 'load-path "~/.emacs_modules/markdown-mode")
 (add-to-list 'load-path "~/.emacs_modules/move-text")
 (add-to-list 'load-path "~/.emacs_modules/multiple-cursors.el")
-(add-to-list 'load-path "~/.emacs_modules/rtags/src")
 (add-to-list 'load-path "~/.emacs_modules/s.el")
 (add-to-list 'load-path "~/.emacs_modules/seq")
 (add-to-list 'load-path "~/.emacs_modules/shut-up")
@@ -83,7 +81,7 @@
     ;; Skip magit-libgit.el compilation
     (byte-recompile-dir-exclude "~/.emacs_modules/magit/lisp" "magit-libgit.el"))
 
-  (byte-recompile-dir-exclude "~/.emacs_modules/cmake-ide" "test")
+
   (byte-recompile-directory "~/.emacs_modules/company-lsp" 0)
   (byte-recompile-directory "~/.emacs_modules/company-mode" 0)
   (byte-recompile-directory "~/.emacs_modules/company-irony" 0)
@@ -104,7 +102,6 @@
   (byte-recompile-directory "~/.emacs_modules/zygospore.el" 0)
 
   (require 'ag)
-  (require 'cmake-ide)
   (require 'company)
   (require 'counsel)
   (require 'dockerfile-mode)
@@ -112,22 +109,29 @@
   (require 'ccls)
   (require 'expand-region)
   (require 'find-lisp)
-  (require 'irony)
-  (require 'irony-cdb)
-  (require 'lsp-mode)
-  (require 'rtags)
   (require 'move-text)
   (require 'multiple-cursors)
   (require 'swiper)
   (require 'xterm-color)
   (require 'yasnippet)
 
-  (set-variable 'rtags-path (file-truename "~/.emacs_modules/rtags/bin"))
-  (cmake-ide-setup)
+  (unless use-lsp-mode
+    (add-to-list 'load-path "~/.emacs_modules/cmake-ide")
+    (byte-recompile-dir-exclude "~/.emacs_modules/cmake-ide" "test")
+
+    (add-to-list 'load-path "~/.emacs_modules/rtags/src")
+    (require 'cmake-ide)
+    (require 'irony)
+    (require 'irony-cdb)
+    (require 'rtags)
+
+    (set-variable 'rtags-path (file-truename "~/.emacs_modules/rtags/bin"))
+    (cmake-ide-setup)
+    (eval-after-load 'company
+      '(add-to-list 'company-backends 'company-irony)))
+
   (editorconfig-mode 1)
   (add-hook 'after-init-hook 'global-company-mode)
-  (eval-after-load 'company
-    '(add-to-list 'company-backends 'company-irony))
   (move-text-default-bindings)
 
   (add-to-list 'auto-mode-alist '("Dockerfile\\'" . dockerfile-mode))
