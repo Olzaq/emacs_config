@@ -27,10 +27,11 @@
   "LSP mode config."
   (use-package lsp-mode
     :commands lsp
+    :config (define-key lsp-mode-map (kbd "C-c l") lsp-command-map)
     :init (setq lsp-modeline-diagnostics-enable nil
                 lsp-modeline-code-actions-enable nil))
-  (use-package lsp-ui :commands lsp-ui-mode)
-  (use-package company-lsp :commands company-lsp)
+  (use-package lsp-ui :after lsp-mode :commands lsp-ui-mode)
+  (use-package company-lsp :after lsp-mode :commands company-lsp)
 
   (use-package ccls
     :after lsp-mode
