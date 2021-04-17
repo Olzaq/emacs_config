@@ -33,7 +33,11 @@
 
   (use-package lsp-ui
     :after lsp-mode
-    :commands lsp-ui-mode)
+    :commands lsp-ui-mode
+    :init (setq lsp-ui-sideline-show-hover t
+                lsp-ui-sideline-delay 0.5
+                lsp-ui-sideline-update-mode 'line))
+
   (use-package company-lsp
     :after lsp-mode
     :commands company-lsp)
