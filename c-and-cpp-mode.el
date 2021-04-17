@@ -34,13 +34,21 @@
   (use-package lsp-ui
     :after lsp-mode
     :commands lsp-ui-mode
+    :config
+    (add-hook 'lsp-ui-doc-frame-hook
+              (lambda (frame _w)
+                (set-face-attribute 'default frame :font "Overpass Mono 11")))
     :init (setq lsp-ui-sideline-show-hover t
                 lsp-ui-sideline-delay 0.5
                 lsp-ui-sideline-update-mode 'line))
 
   (use-package company-lsp
     :after lsp-mode
-    :commands company-lsp)
+    :commands company-lsp
+    :config
+    (setq company-lsp-enable-snippet t
+          company-lsp-cache-candidates t)
+    (push 'company-lsp company-backends))
 
   (use-package ccls
     :after lsp-mode
