@@ -30,14 +30,22 @@
     :config (define-key lsp-mode-map (kbd "C-c l") lsp-command-map)
     :init (setq lsp-modeline-diagnostics-enable nil
                 lsp-modeline-code-actions-enable nil))
-  (use-package lsp-ui :after lsp-mode :commands lsp-ui-mode)
-  (use-package company-lsp :after lsp-mode :commands company-lsp)
+
+  (use-package lsp-ui
+    :after lsp-mode
+    :commands lsp-ui-mode)
+  (use-package company-lsp
+    :after lsp-mode
+    :commands company-lsp)
 
   (use-package ccls
     :after lsp-mode
     :config (setq ccls-executable "~/src/CCLS_install/bin/ccls")
     :hook ((c-mode c++-mode objc-mode cuda-mode) .
-           (lambda () (require 'ccls) (lsp)))))
+           (lambda () (require 'ccls) (lsp))))
+
+  (add-hook 'c-mode-hook 'lsp)
+  (add-hook 'c++-mode-hook 'lsp))
 
 (if use-lsp-mode
     (do-lsp-mode-config)
