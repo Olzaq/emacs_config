@@ -123,7 +123,8 @@
 (require 'helm-settings)
 
 (unless running-in-termux
-  (require 'cedet-settings)
+  (unless use-lsp-mode
+    (require 'cedet-settings))
   (require 'c-and-cpp-mode)
   (require 'gdb-settings))
 
