@@ -29,7 +29,10 @@
     :commands lsp
     :config (define-key lsp-mode-map (kbd "C-c l") lsp-command-map)
     :init (setq lsp-modeline-diagnostics-enable nil
-                lsp-modeline-code-actions-enable nil))
+                lsp-modeline-workspace-status-enable nil
+                lsp-modeline-code-actions-enable nil
+                lsp-enable-symbol-highlighting nil
+                lsp-headerline-breadcrumb-enable nil))
 
   (use-package lsp-ui
     :after lsp-mode
@@ -38,7 +41,7 @@
     (add-hook 'lsp-ui-doc-frame-hook
               (lambda (frame _w)
                 (set-face-attribute 'default frame :font "Overpass Mono 11")))
-    :init (setq lsp-ui-sideline-show-hover t
+    :init (setq lsp-ui-sideline-enable nil
                 lsp-ui-sideline-delay 0.5
                 lsp-ui-sideline-update-mode 'line))
 
