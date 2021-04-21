@@ -32,7 +32,8 @@
                 lsp-modeline-workspace-status-enable nil
                 lsp-modeline-code-actions-enable nil
                 lsp-enable-symbol-highlighting nil
-                lsp-headerline-breadcrumb-enable nil))
+                lsp-headerline-breadcrumb-enable nil
+                lsp-lens-enable nil))
 
   (use-package lsp-ui
     :after lsp-mode
@@ -41,12 +42,14 @@
     (add-hook 'lsp-ui-doc-frame-hook
               (lambda (frame _w)
                 (set-face-attribute 'default frame :font "Overpass Mono 11")))
-    :init (setq lsp-ui-sideline-enable nil
+    :init (setq lsp-ui-sidelien-enable t
+                lsp-ui-peek-enable nil
                 lsp-ui-sideline-delay 0.5
-                lsp-ui-sideline-update-mode 'line))
+                lsp-ui-sideline-update-mode 'line
+                lsp-ui-doc-show-with-cursor nil))
 
   (use-package company-lsp
-    :after lsp-mode
+    :after (lsp-mode company)
     :commands company-lsp
     :config
     (setq company-lsp-enable-snippet t
