@@ -63,7 +63,7 @@
 (add-to-list 'load-path "~/.emacs_modules/zygospore.el")
 
 (unless running-in-termux
-  (byte-recompile-dir-exclude "~/.emacs_modules/dash.el")
+  (byte-recompile-dir-exclude "~/.emacs_modules/dash.el" ".dir-locals.el")
   (byte-recompile-directory "~/.emacs_modules/editorconfig-emacs" 0)
   (byte-recompile-file "~/.emacs_modules/f.el/f.el" nil 0)
   (byte-recompile-directory "~/.emacs_modules/helm" 0)
