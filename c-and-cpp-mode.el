@@ -49,12 +49,21 @@
                 lsp-ui-doc-show-with-cursor nil))
 
   (use-package company-lsp
-    :after (lsp-mode company)
+    :after lsp-mode
     :commands company-lsp
     :config
     (setq company-lsp-enable-snippet t
           company-lsp-cache-candidates t)
     (push 'company-lsp company-backends))
+
+  (defun lsp--sort-completions (completions)
+    (lsp-completion--sort-completions completions))
+
+  (defun lsp--annotate (item)
+    (lsp-completion--annotate item))
+
+  (defun lsp--resolve-completion (item)
+    (lsp-completion--resolve item))
 
   (use-package ccls
     :after lsp-mode
