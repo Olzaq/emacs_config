@@ -33,6 +33,7 @@
 (global-set-key (kbd "C-c c") 'camelscore-word-at-point)
 (global-set-key (kbd "C-x C-c") 'ask-before-closing)
 
+(global-set-key (kbd "C-c t") 'toggle-window-dedicated)
 (global-set-key (kbd "C-c w") 'whitespace-mode)
 (global-set-key (kbd "C-x 1") 'zygospore-toggle-delete-other-windows)
 
