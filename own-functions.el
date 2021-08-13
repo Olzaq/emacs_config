@@ -162,6 +162,16 @@
   (interactive)
   (message (buffer-file-name)))
 
+(defun toggle-window-dedicated ()
+  "Control is Emacs is allowed to display another buffer in current window."
+  (interactive)
+  (message
+   (if (let (window (get-buffer-window (current-buffer)))
+         (set-window-dedicated-p window (not (window-dedicated-p window))))
+       "%s: Can't touch this!"
+     "%s is up for grabs.")
+   (current-buffer)))
+
 (defun ask-before-closing ()
   "Close only if y was pressed."
   (interactive)
