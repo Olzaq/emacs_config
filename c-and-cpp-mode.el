@@ -42,11 +42,11 @@
     (add-hook 'lsp-ui-doc-frame-hook
               (lambda (frame _w)
                 (set-face-attribute 'default frame :font "Overpass Mono 11")))
-    :init (setq lsp-ui-sidelien-enable t
+    :init (setq lsp-ui-sideline-enable t
                 lsp-ui-peek-enable nil
                 lsp-ui-sideline-delay 0.5
                 lsp-ui-sideline-update-mode 'line
-                lsp-ui-doc-show-with-cursor nil))
+                lsp-ui-doc-show-with-cursor t))
 
   (use-package company-lsp
     :after lsp-mode
