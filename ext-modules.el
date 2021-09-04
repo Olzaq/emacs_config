@@ -95,7 +95,7 @@
   (byte-recompile-dir-exclude "~/.emacs_modules/lsp-ui" "test")
   (byte-recompile-directory "~/.emacs_modules/markdown-mode" 0)
   (byte-recompile-directory "~/.emacs_modules/move-text" 0)
-  (byte-recompile-directory "~/.emacs_modules/org-mode/lisp" 0)
+  ;;(byte-recompile-directory "~/.emacs_modules/org-mode/lisp" 0)
   (byte-recompile-directory "~/.emacs_modules/spinner" 0)
   (byte-recompile-directory "~/.emacs_modules/with-editor" 0)
   (byte-recompile-directory "~/.emacs_modules/xterm-color" 0)
