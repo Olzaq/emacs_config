@@ -31,7 +31,7 @@
     :init (setq lsp-modeline-diagnostics-enable nil
                 lsp-modeline-workspace-status-enable nil
                 lsp-modeline-code-actions-enable nil
-                lsp-enable-symbol-highlighting nil
+                lsp-enable-symbol-highlighting t
                 lsp-headerline-breadcrumb-enable nil
                 lsp-lens-enable nil))
 
