@@ -43,7 +43,7 @@
               (lambda (frame _w)
                 (set-face-attribute 'default frame :font "Monospace")))
     :init (setq lsp-ui-sideline-enable t
-                lsp-ui-peek-enable nil
+                lsp-ui-peek-enable t
                 lsp-ui-sideline-delay 0.5
                 lsp-ui-sideline-update-mode 'line
                 lsp-ui-doc-show-with-cursor t))
