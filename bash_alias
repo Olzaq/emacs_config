@@ -29,7 +29,7 @@ EditChange()
     git show --pretty= --name-status $1 | grep -v '^D' | cut -f2 -d$'\t' | (xargs emacs ) &
 }
 
-alias ll='ls -aFlq'
+alias ll='ls -aFlq --color'
 alias CmakeExport='cmake -DCMAKE_EXPORT_COMPILE_COMMANDS=1'
 alias GenerateTags='gtags --gtagslabel=new-ctags'
 
