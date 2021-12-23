@@ -4,6 +4,10 @@
 
 ;;; Code:
 
+; Make sure submodules are initialized on the 1st run
+(unless (file-readable-p (file-truename "~/.emacs_modules/use-package/use-package.el"))
+  (error "Submodules are probably not installed.  Run git submodule update --init'"))
+
 (eval-when-compile
   (add-to-list 'load-path "~/.emacs_modules/use-package")
   (require 'use-package))
