@@ -6,6 +6,10 @@
 
 ;; Helm setup
 
+; Make sure autoloads exists
+(unless (file-readable-p (file-truename "~/.emacs_modules/helm/helm-autoloads.el"))
+  (error "~/.emacs_modules/helm/helm-autoloads.el missing, run 'make autoloads'"))
+
 ;; this variables must be set before load helm-gtags
 (setq helm-gtags-prefix-key "\C-t")
 
