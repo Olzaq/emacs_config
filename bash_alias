@@ -35,6 +35,7 @@ alias GenerateTags='gtags --gtagslabel=new-ctags'
 
 alias stopEmacs="pkill -SIGUSR2 -i emacs ; emacsclient -e '(setq debug-on-quit nil)'"
 
+alias amend='git commit --amend --no-edit'
 alias glog='git lg'
 alias gpull='git pull --rebase'
 alias gpush='git push'
