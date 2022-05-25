@@ -39,6 +39,8 @@
   searchallfor = "!sh -c 'git branch -a | tr -d \\* | sed -e \"s/->.*//\" | xargs git grep $0 '"
   searchwithcontextfor = "!sh -c 'git branch | tr -d \\* | xargs git grep -C 2 $0 '"
 
+  listbranches = "for-each-ref --sort=committerdate refs/heads/"
+
   #
   # from https://github.com/alikins/gitconfig/blob/master/gitconfig
   #
