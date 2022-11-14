@@ -28,6 +28,9 @@
 (use-package ht
   :straight t)
 
+(use-package markdown-mode
+  :straight t)
+
 (use-package s
   :straight t)
 
@@ -95,7 +98,6 @@
   ;(byte-recompile-directory "~/.emacs_modules/expand-region" 0)
   ;(byte-recompile-directory "~/.emacs_modules/irony-mode" 0)
   ;(byte-recompile-directory "~/.emacs_modules/levenshtein" 0)
-  ;(byte-recompile-directory "~/.emacs_modules/markdown-mode" 0)
   ;(byte-recompile-directory "~/.emacs_modules/move-text" 0)
   ;;(byte-recompile-directory "~/.emacs_modules/org-mode/lisp" 0)
   ;(byte-recompile-directory "~/.emacs_modules/with-editor" 0)
