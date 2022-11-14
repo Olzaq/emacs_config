@@ -28,6 +28,12 @@
 (use-package spinner
   :straight t)
 
+(use-package yasnippet
+  :straight t
+  :config
+  (yas-global-mode 1))
+
+
 (defun byte-recompile-dir-exclude (dir &optional pattern)
   "Bytecompile files in DIR unless match PATTERN."
   (mapc
@@ -69,7 +75,6 @@
 (add-to-list 'load-path "~/.emacs_modules/undercover.el")
 (add-to-list 'load-path "~/.emacs_modules/with-editor")
 (add-to-list 'load-path "~/.emacs_modules/xterm-color")
-(add-to-list 'load-path "~/.emacs_modules/yasnippet")
 (add-to-list 'load-path "~/.emacs_modules/zygospore.el")
 
 (unless running-in-termux
@@ -120,7 +125,6 @@
   (require 'multiple-cursors)
   (require 'swiper)
   (require 'xterm-color)
-  (require 'yasnippet)
 
   (unless use-lsp-mode
     (add-to-list 'load-path "~/.emacs_modules/cmake-ide")

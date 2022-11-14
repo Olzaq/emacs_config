@@ -100,9 +100,6 @@
 [submodule "ext/xterm-color"]
 	path = ext/xterm-color
 	url = https://github.com/atomontage/xterm-color.git
-[submodule "ext/yasnippet"]
-	path = ext/yasnippet
-	url = https://github.com/joaotavora/yasnippet
 [submodule "ext/use-package"]
 	path = ext/use-package
 	url = https://github.com/jwiegley/use-package.git
