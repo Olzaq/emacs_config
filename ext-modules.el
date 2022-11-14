@@ -22,6 +22,9 @@
 (use-package dash
   :straight t)
 
+(use-package spinner
+  :straight t)
+
 (defun byte-recompile-dir-exclude (dir &optional pattern)
   "Bytecompile files in DIR unless match PATTERN."
   (mapc
@@ -59,7 +62,6 @@
 (add-to-list 'load-path "~/.emacs_modules/s.el")
 (add-to-list 'load-path "~/.emacs_modules/seq")
 (add-to-list 'load-path "~/.emacs_modules/shut-up")
-(add-to-list 'load-path "~/.emacs_modules/spinner")
 (add-to-list 'load-path "~/.emacs_modules/swiper")
 (add-to-list 'load-path "~/.emacs_modules/transient/lisp")
 (add-to-list 'load-path "~/.emacs_modules/undercover.el")
@@ -101,7 +103,6 @@
   ;(byte-recompile-directory "~/.emacs_modules/markdown-mode" 0)
   ;(byte-recompile-directory "~/.emacs_modules/move-text" 0)
   ;;(byte-recompile-directory "~/.emacs_modules/org-mode/lisp" 0)
-  ;(byte-recompile-directory "~/.emacs_modules/spinner" 0)
   ;(byte-recompile-directory "~/.emacs_modules/with-editor" 0)
   ;(byte-recompile-directory "~/.emacs_modules/xterm-color" 0)
   ;(byte-recompile-directory "~/.emacs_modules/zygospore.el" 0)

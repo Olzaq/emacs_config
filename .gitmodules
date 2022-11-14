@@ -79,9 +79,6 @@
 [submodule "ext/move-text"]
 	path = ext/move-text
 	url = https://github.com/emacsfodder/move-text.git
-[submodule "ext/spinner"]
-	path = ext/spinner
-	url = https://github.com/Malabarba/spinner.el.git
 [submodule "ext/ht.el"]
 	path = ext/ht.el
 	url = https://github.com/Wilfred/ht.el.git
