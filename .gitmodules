@@ -52,15 +52,9 @@
 [submodule "ext/zygospore.el"]
 	path = ext/zygospore.el
 	url = https://github.com/LouisKottmann/zygospore.el.git
-[submodule "ext/helm"]
-	path = ext/helm
-	url = https://github.com/emacs-helm/helm.git
 [submodule "ext/emacs-async"]
 	path = ext/emacs-async
 	url = https://github.com/jwiegley/emacs-async.git
-[submodule "ext/helm-gtags"]
-	path = ext/helm-gtags
-	url = https://github.com/emacsorphanage/helm-gtags.git
 [submodule "ext/cmake-ide"]
 	path = ext/cmake-ide
 	url = https://github.com/atilaneves/cmake-ide.git

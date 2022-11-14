@@ -63,8 +63,6 @@
 (add-to-list 'load-path "~/.emacs_modules/emacs-ccls")
 (add-to-list 'load-path "~/.emacs_modules/expand-region")
 (add-to-list 'load-path "~/.emacs_modules/flycheck")
-(add-to-list 'load-path "~/.emacs_modules/helm")
-(add-to-list 'load-path "~/.emacs_modules/helm-gtags")
 (add-to-list 'load-path "~/.emacs_modules/hydra.git")
 (add-to-list 'load-path "~/.emacs_modules/irony-mode")
 (add-to-list 'load-path "~/.emacs_modules/levenshtein")
@@ -85,8 +83,6 @@
 
 (unless running-in-termux
   (byte-recompile-directory "~/.emacs_modules/editorconfig-emacs" 0)
-  (byte-recompile-directory "~/.emacs_modules/helm" 0)
-  ;(byte-recompile-directory "~/.emacs_modules/helm-gtags" 0)
   ;(byte-recompile-directory "~/.emacs_modules/hydra.git" 0)
   (if (version< emacs-version "25")
       (message "Skipping bytecompile...")

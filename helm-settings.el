@@ -6,46 +6,32 @@
 
 ;; Helm setup
 
-; Make sure autoloads exists
-(unless (file-readable-p (file-truename "~/.emacs_modules/helm/helm-autoloads.el"))
-  (error "~/.emacs_modules/helm/helm-autoloads.el missing, run 'make autoloads'"))
+(use-package helm
+  :straight t
+  :preface
+  (require 'helm-config)
+  (require 'helm-grep)
+  :demand t
+  :bind (("M-x" . helm-M-x)
+         ;;("C-x C-f" . helm-find-files)
+         ("C-x b" . helm-buffers-list)
+         ("C-x c o" . helm-occur)
+         ("M-y" . helm-show-kill-ring)
+         ("C-x r b" . helm-filtered-bookmarks)
+         :map helm-map
+         ("<tab>" . helm-execute-persistent-action) ; rebind tab to run persistent action
+         ("C-i" . helm-execute-persistent-action) ; make TAB works in terminal
+         ("C-z" . helm-select-action) ; list actions using C-z
+         :map shell-mode-map
+         ("C-c C-l" . helm-comint-input-ring) ; in shell mode
+         :map minibuffer-local-map
+         ("C-c C-l" . helm-minibuffer-history)
+         )
+  :config (helm-mode 1))
 
-;; this variables must be set before load helm-gtags
-(setq helm-gtags-prefix-key "\C-t")
+;(global-set-key (kbd "C-c h") 'helm-command-prefix)
 
-(require 'helm-config)
-(require 'helm-grep)
-
-(helm-mode 1)
-
-(unless running-in-termux
-  (unless use-lsp-mode
-    (require 'helm-gtags)
-
-    ;; Enable helm-gtags-mode
-    (add-hook 'c-mode-hook 'helm-gtags-mode)
-    (add-hook 'c++-mode-hook 'helm-gtags-mode)
-    (add-hook 'asm-mode-hook 'helm-gtags-mode)
-
-    ;; customize
-    (custom-set-variables
-     '(helm-gtags-path-style 'relative)
-     '(helm-gtags-ignore-case t)
-     '(helm-gtags-auto-update t))
-
-    ;; key bindings
-    (with-eval-after-load 'helm-gtags
-      (define-key helm-gtags-mode-map (kbd "M-t") 'helm-gtags-find-tag)
-      (define-key helm-gtags-mode-map (kbd "M-r") 'helm-gtags-find-rtag)
-      (define-key helm-gtags-mode-map (kbd "M-s") 'helm-gtags-find-symbol)
-      (define-key helm-gtags-mode-map (kbd "M-g M-p") 'helm-gtags-parse-file)
-      (define-key helm-gtags-mode-map (kbd "C-c <") 'helm-gtags-previous-history)
-      (define-key helm-gtags-mode-map (kbd "C-c >") 'helm-gtags-next-history)
-      (define-key helm-gtags-mode-map (kbd "M-,") 'helm-gtags-pop-stack))))
-
-(define-key helm-map (kbd "TAB") #'helm-execute-persistent-action)
-(define-key helm-map (kbd "<tab>") #'helm-execute-persistent-action)
-(define-key helm-map (kbd "C-z") #'helm-select-action)
+(add-to-list 'helm-completing-read-handlers-alist '(find-file . ido))
 
 (provide 'helm-settings)
 ;;; helm-settings.el ends here

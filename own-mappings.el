@@ -61,12 +61,5 @@
 ;; Company
 (global-set-key (kbd "C-M-&") 'company-complete-common-or-cycle)
 
-;; Helm
-(global-set-key (kbd "C-c h") 'helm-command-prefix)
-(global-set-key (kbd "M-x") 'helm-M-x)
-(global-set-key (kbd "M-y") 'helm-show-kill-ring)
-(global-set-key (kbd "C-x b") 'helm-buffers-list)
-(add-to-list 'helm-completing-read-handlers-alist '(find-file . ido))
-
 (provide 'own-mappings)
 ;;; own-mappings.el ends here
