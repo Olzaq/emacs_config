@@ -67,9 +67,6 @@
 [submodule "ext/markdown-mode"]
 	path = ext/markdown-mode
 	url = https://github.com/jrblevin/markdown-mode.git
-[submodule "ext/emacs-ccls"]
-	path = ext/emacs-ccls
-	url = https://github.com/MaskRay/emacs-ccls.git
 [submodule "ext/use-package"]
 	path = ext/use-package
 	url = https://github.com/jwiegley/use-package.git
