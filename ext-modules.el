@@ -131,7 +131,7 @@
       '(add-to-list 'company-backends 'company-irony)))
 
   (editorconfig-mode 1)
-  (add-hook 'after-init-hook 'global-company-mode)
+  ;; (add-hook 'after-init-hook 'global-company-mode)
   (move-text-default-bindings)
 
   (add-to-list 'auto-mode-alist '("Dockerfile\\'" . dockerfile-mode))
