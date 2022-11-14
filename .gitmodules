@@ -76,9 +76,6 @@
 [submodule "ext/move-text"]
 	path = ext/move-text
 	url = https://github.com/emacsfodder/move-text.git
-[submodule "ext/ht.el"]
-	path = ext/ht.el
-	url = https://github.com/Wilfred/ht.el.git
 [submodule "ext/markdown-mode"]
 	path = ext/markdown-mode
 	url = https://github.com/jrblevin/markdown-mode.git
