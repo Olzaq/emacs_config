@@ -79,12 +79,6 @@
 [submodule "ext/emacs-ccls"]
 	path = ext/emacs-ccls
 	url = https://github.com/MaskRay/emacs-ccls.git
-[submodule "ext/magit-delta"]
-	path = ext/magit-delta
-	url = https://github.com/dandavison/magit-delta.git
-[submodule "ext/xterm-color"]
-	path = ext/xterm-color
-	url = https://github.com/atomontage/xterm-color.git
 [submodule "ext/use-package"]
 	path = ext/use-package
 	url = https://github.com/jwiegley/use-package.git

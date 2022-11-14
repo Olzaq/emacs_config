@@ -69,7 +69,6 @@
 (add-to-list 'load-path "~/.emacs_modules/lsp-mode")
 (add-to-list 'load-path "~/.emacs_modules/lsp-ui")
 (add-to-list 'load-path "~/.emacs_modules/magit/lisp")
-(add-to-list 'load-path "~/.emacs_modules/magit-delta")
 (add-to-list 'load-path "~/.emacs_modules/markdown-mode")
 (add-to-list 'load-path "~/.emacs_modules/move-text")
 (add-to-list 'load-path "~/.emacs_modules/multiple-cursors.el")
@@ -78,7 +77,6 @@
 (add-to-list 'load-path "~/.emacs_modules/transient/lisp")
 (add-to-list 'load-path "~/.emacs_modules/undercover.el")
 (add-to-list 'load-path "~/.emacs_modules/with-editor")
-(add-to-list 'load-path "~/.emacs_modules/xterm-color")
 (add-to-list 'load-path "~/.emacs_modules/zygospore.el")
 
 (unless running-in-termux
@@ -109,7 +107,6 @@
   ;(byte-recompile-directory "~/.emacs_modules/move-text" 0)
   ;;(byte-recompile-directory "~/.emacs_modules/org-mode/lisp" 0)
   ;(byte-recompile-directory "~/.emacs_modules/with-editor" 0)
-  ;(byte-recompile-directory "~/.emacs_modules/xterm-color" 0)
   ;(byte-recompile-directory "~/.emacs_modules/zygospore.el" 0)
 
   (require 'ag)
@@ -123,7 +120,6 @@
   (require 'move-text)
   (require 'multiple-cursors)
   (require 'swiper)
-  (require 'xterm-color)
 
   (unless use-lsp-mode
     (add-to-list 'load-path "~/.emacs_modules/cmake-ide")
