@@ -22,9 +22,6 @@
 [submodule "magit"]
 	path = ext/magit
 	url = https://github.com/magit/magit
-[submodule "ext/seq"]
-	path = ext/seq
-	url = https://github.com/Olzaq/seq.el.git
 [submodule "ext/hydra.git"]
 	path = ext/hydra.git
 	url = https://github.com/abo-abo/hydra.git
