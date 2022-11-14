@@ -67,15 +67,6 @@
 [submodule "ext/markdown-mode"]
 	path = ext/markdown-mode
 	url = https://github.com/jrblevin/markdown-mode.git
-[submodule "ext/lsp-mode"]
-	path = ext/lsp-mode
-	url = https://github.com/emacs-lsp/lsp-mode.git
-[submodule "ext/lsp-ui"]
-	path = ext/lsp-ui
-	url = https://github.com/emacs-lsp/lsp-ui.git
-[submodule "ext/company-lsp"]
-	path = ext/company-lsp
-	url = https://github.com/tigersoldier/company-lsp.git
 [submodule "ext/emacs-ccls"]
 	path = ext/emacs-ccls
 	url = https://github.com/MaskRay/emacs-ccls.git

@@ -23,25 +23,41 @@
   (add-hook 'c-mode-hook 'irony-mode)
   (add-hook 'irony-mode-hook 'irony-cdb-autosetup-compile-options))
 
+
 (defun do-lsp-mode-config ()
   "LSP mode config."
   (use-package lsp-mode
+    :straight t
     :commands lsp
-    :config (define-key lsp-mode-map (kbd "C-c l") lsp-command-map)
-    :init (setq lsp-modeline-diagnostics-enable nil
-                lsp-modeline-workspace-status-enable nil
-                lsp-modeline-code-actions-enable nil
-                lsp-enable-symbol-highlighting t
-                lsp-headerline-breadcrumb-enable nil
-                lsp-lens-enable nil))
+    :hook (;; replace XXX-mode with concrete major-mode(e. g. python-mode)
+           (c++-mode . lsp)
+           ;;(js2-mode . lsp)
+           ;; if you want which-key integration
+           ;;(lsp-mode . lsp-enable-which-key-integration)
+           )
+    :config
+    (define-key lsp-mode-map (kbd "C-c l") lsp-command-map)
+    (setq lsp-clients-clangd-args '("-j=4" "-background-index" "-log=verbose"))
+    )
 
   (use-package lsp-ui
     :after lsp-mode
+    :straight t
     :commands lsp-ui-mode
     :config
     (add-hook 'lsp-ui-doc-frame-hook
               (lambda (frame _w)
                 (set-face-attribute 'default frame :font "Monospace")))
+    (setq lsp-ui-doc-border                 "orange"
+          ;;  lsp-ui-doc-position               'at-point
+          lsp-ui-doc-position               'top
+          lsp-ui-sideline-show-code-actions nil
+          lsp-ui-sideline-show-hover        nil)
+    (custom-set-faces
+      '(lsp-ui-doc-background ((nil :background "#000000")))
+      '(lsp-ui-doc-header ((t :foreground "#EEEEEE" :background "#000000")))
+      '(lsp-ui-doc-url ((nil :background "#000000"))))
+
     :init (setq lsp-ui-sideline-enable t
                 lsp-ui-peek-enable t
                 lsp-ui-sideline-delay 0.5
