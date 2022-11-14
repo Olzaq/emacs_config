@@ -7,9 +7,6 @@
 [submodule "swiper"]
 	path = ext/swiper
 	url = https://github.com/abo-abo/swiper
-[submodule "dash.el"]
-	path = ext/dash.el
-	url = https://github.com/magnars/dash.el
 [submodule "ext/s.el"]
 	path = ext/s.el
 	url = https://github.com/magnars/s.el

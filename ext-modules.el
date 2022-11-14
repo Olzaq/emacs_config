@@ -19,6 +19,9 @@
 (require 'org-loaddefs)
 (require 'org)
 
+(use-package dash
+  :straight t)
+
 (defun byte-recompile-dir-exclude (dir &optional pattern)
   "Bytecompile files in DIR unless match PATTERN."
   (mapc
@@ -33,7 +36,6 @@
 ;;(add-to-list 'load-path "~/.emacs_modules/company-lsp")
 (add-to-list 'load-path "~/.emacs_modules/company-mode")
 (add-to-list 'load-path "~/.emacs_modules/csv-mode")
-(add-to-list 'load-path "~/.emacs_modules/dash.el")
 (add-to-list 'load-path "~/.emacs_modules/dockerfile-mode")
 (add-to-list 'load-path "~/.emacs_modules/editorconfig-emacs")
 (add-to-list 'load-path "~/.emacs_modules/emacs-async")
@@ -67,7 +69,6 @@
 (add-to-list 'load-path "~/.emacs_modules/zygospore.el")
 
 (unless running-in-termux
-  ;;(byte-recompile-dir-exclude "~/.emacs_modules/dash.el" ".dir-locals.el")
   (byte-recompile-directory "~/.emacs_modules/editorconfig-emacs" 0)
   ;;(byte-recompile-file "~/.emacs_modules/f.el/f.el" nil 0)
   (byte-recompile-directory "~/.emacs_modules/helm" 0)
