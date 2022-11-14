@@ -22,6 +22,9 @@
 (use-package dash
   :straight t)
 
+(use-package f
+  :straight t)
+
 (use-package spinner
   :straight t)
 
@@ -44,7 +47,6 @@
 (add-to-list 'load-path "~/.emacs_modules/emacs-async")
 (add-to-list 'load-path "~/.emacs_modules/emacs-ccls")
 (add-to-list 'load-path "~/.emacs_modules/expand-region")
-(add-to-list 'load-path "~/.emacs_modules/f.el")
 (add-to-list 'load-path "~/.emacs_modules/flycheck")
 (add-to-list 'load-path "~/.emacs_modules/helm")
 (add-to-list 'load-path "~/.emacs_modules/helm-gtags")
@@ -72,7 +74,6 @@
 
 (unless running-in-termux
   (byte-recompile-directory "~/.emacs_modules/editorconfig-emacs" 0)
-  ;;(byte-recompile-file "~/.emacs_modules/f.el/f.el" nil 0)
   (byte-recompile-directory "~/.emacs_modules/helm" 0)
   ;(byte-recompile-directory "~/.emacs_modules/helm-gtags" 0)
   ;;  (byte-recompile-file "~/.emacs_modules/ht.el/ht.el" nil 0)
