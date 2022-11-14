@@ -28,6 +28,9 @@
 (use-package ht
   :straight t)
 
+(use-package s
+  :straight t)
+
 (use-package spinner
   :straight t)
 
@@ -69,7 +72,6 @@
 (add-to-list 'load-path "~/.emacs_modules/markdown-mode")
 (add-to-list 'load-path "~/.emacs_modules/move-text")
 (add-to-list 'load-path "~/.emacs_modules/multiple-cursors.el")
-(add-to-list 'load-path "~/.emacs_modules/s.el")
 (add-to-list 'load-path "~/.emacs_modules/seq")
 (add-to-list 'load-path "~/.emacs_modules/shut-up")
 (add-to-list 'load-path "~/.emacs_modules/swiper")
@@ -87,7 +89,6 @@
   (if (version< emacs-version "25")
       (message "Skipping bytecompile...")
     (byte-recompile-directory "~/.emacs_modules/ag.el" 0)
-    ;(byte-recompile-directory "~/.emacs_modules/s.el" 0)
     (byte-recompile-directory "~/.emacs_modules/seq" 0)
     (byte-recompile-directory "~/.emacs_modules/swiper" 0)
     (byte-recompile-directory "~/.emacs_modules/transient" 0)
