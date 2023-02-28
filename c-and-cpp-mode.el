@@ -64,14 +64,15 @@
                 lsp-ui-sideline-update-mode 'line
                 lsp-ui-doc-show-with-cursor t))
 
-  ;; (use-package ccls
-  ;;   :after lsp-mode
-  ;;   :config (setq ccls-executable "~/src/CCLS_install/bin/ccls")
-  ;;   :hook ((c-mode c++-mode objc-mode cuda-mode) .
-  ;;          (lambda () (require 'ccls) (lsp))))
-
-  (add-hook 'c-mode-hook 'lsp)
-  (add-hook 'c++-mode-hook 'lsp))
+  (use-package company-lsp
+    :after lsp-mode
+    :straight t
+    :commands company-lsp
+    :config
+    (setq company-lsp-enable-snippet t
+          company-lsp-cache-candidates t)
+    (push 'company-lsp company-backends))
+  )
 
 (if use-lsp-mode
     (do-lsp-mode-config)
