@@ -51,8 +51,8 @@
     (setq lsp-ui-doc-border                 "orange"
           ;;  lsp-ui-doc-position               'at-point
           lsp-ui-doc-position               'top
-          lsp-ui-sideline-show-code-actions nil
-          lsp-ui-sideline-show-hover        nil)
+          lsp-ui-sideline-show-code-actions t
+          lsp-ui-sideline-show-hover        t)
     (custom-set-faces
       '(lsp-ui-doc-background ((nil :background "#000000")))
       '(lsp-ui-doc-header ((t :foreground "#EEEEEE" :background "#000000")))
