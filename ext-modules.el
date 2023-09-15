@@ -19,6 +19,8 @@
 (require 'org-loaddefs)
 (require 'org)
 
+(straight-use-package 'ag)
+
 (use-package dash
   :straight t)
 
@@ -55,7 +57,6 @@
        (byte-recompile-file file nil 0)))
    (directory-files dir t "\.el$")))
 
-(add-to-list 'load-path "~/.emacs_modules/ag.el")
 (add-to-list 'load-path "~/.emacs_modules/company-irony")
 (add-to-list 'load-path "~/.emacs_modules/company-mode")
 (add-to-list 'load-path "~/.emacs_modules/csv-mode")
@@ -79,7 +80,6 @@
   ;(byte-recompile-directory "~/.emacs_modules/hydra.git" 0)
   (if (version< emacs-version "25")
       (message "Skipping bytecompile...")
-    (byte-recompile-directory "~/.emacs_modules/ag.el" 0)
     (byte-recompile-directory "~/.emacs_modules/swiper" 0)
 
 
@@ -94,7 +94,6 @@
   ;;(byte-recompile-directory "~/.emacs_modules/org-mode/lisp" 0)
   ;(byte-recompile-directory "~/.emacs_modules/zygospore.el" 0)
 
-  (require 'ag)
   (require 'company)
   (require 'counsel)
   (require 'dockerfile-mode)
