@@ -7,9 +7,6 @@
 [submodule "ext/multiple-cursors.el"]
 	path = ext/multiple-cursors.el
 	url = https://github.com/magnars/multiple-cursors.el
-[submodule "flycheck"]
-	path = ext/flycheck
-	url = https://github.com/flycheck/flycheck
 [submodule "ext/hydra.git"]
 	path = ext/hydra.git
 	url = https://github.com/abo-abo/hydra.git
