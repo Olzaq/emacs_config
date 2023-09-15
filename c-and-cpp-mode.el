@@ -72,6 +72,8 @@
     (setq company-lsp-enable-snippet t
           company-lsp-cache-candidates t)
     (push 'company-lsp company-backends))
+
+  (straight-use-package 'lsp-treemacs)
   )
 
 (if use-lsp-mode
