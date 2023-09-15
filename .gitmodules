@@ -13,15 +13,6 @@
 [submodule "flycheck"]
 	path = ext/flycheck
 	url = https://github.com/flycheck/flycheck
-[submodule "ext/with-editor"]
-	path = ext/with-editor
-	url = https://github.com/magit/with-editor
-[submodule "ext/transient"]
-	path = ext/transient
-	url = https://github.com/magit/transient
-[submodule "magit"]
-	path = ext/magit
-	url = https://github.com/magit/magit
 [submodule "ext/hydra.git"]
 	path = ext/hydra.git
 	url = https://github.com/abo-abo/hydra.git

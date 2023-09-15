@@ -4,7 +4,7 @@
 
 ;;; Code:
 
-(require 'magit)
+(straight-use-package 'magit)
 ;;(require 'magit-delta)
 
 (provide 'git-settings)

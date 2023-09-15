@@ -67,15 +67,11 @@
 (add-to-list 'load-path "~/.emacs_modules/hydra.git")
 (add-to-list 'load-path "~/.emacs_modules/irony-mode")
 (add-to-list 'load-path "~/.emacs_modules/levenshtein")
-(add-to-list 'load-path "~/.emacs_modules/magit/lisp")
-(add-to-list 'load-path "~/.emacs_modules/markdown-mode")
 (add-to-list 'load-path "~/.emacs_modules/move-text")
 (add-to-list 'load-path "~/.emacs_modules/multiple-cursors.el")
 (add-to-list 'load-path "~/.emacs_modules/shut-up")
 (add-to-list 'load-path "~/.emacs_modules/swiper")
-(add-to-list 'load-path "~/.emacs_modules/transient/lisp")
 (add-to-list 'load-path "~/.emacs_modules/undercover.el")
-(add-to-list 'load-path "~/.emacs_modules/with-editor")
 (add-to-list 'load-path "~/.emacs_modules/zygospore.el")
 
 (unless running-in-termux
@@ -85,10 +81,6 @@
       (message "Skipping bytecompile...")
     (byte-recompile-directory "~/.emacs_modules/ag.el" 0)
     (byte-recompile-directory "~/.emacs_modules/swiper" 0)
-    (byte-recompile-directory "~/.emacs_modules/transient" 0)
-
-    ;; Skip magit-libgit.el compilation
-    (byte-recompile-dir-exclude "~/.emacs_modules/magit/lisp" "magit-libgit.el"))
 
 
   ;(byte-recompile-directory "~/.emacs_modules/company-mode" 0)
@@ -100,7 +92,6 @@
   ;(byte-recompile-directory "~/.emacs_modules/levenshtein" 0)
   ;(byte-recompile-directory "~/.emacs_modules/move-text" 0)
   ;;(byte-recompile-directory "~/.emacs_modules/org-mode/lisp" 0)
-  ;(byte-recompile-directory "~/.emacs_modules/with-editor" 0)
   ;(byte-recompile-directory "~/.emacs_modules/zygospore.el" 0)
 
   (require 'ag)
