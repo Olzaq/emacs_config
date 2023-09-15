@@ -34,9 +34,6 @@
 [submodule "ext/expand-region"]
 	path = ext/expand-region
 	url = https://github.com/magnars/expand-region.el.git
-[submodule "ext/dockerfile-mode"]
-	path = ext/dockerfile-mode
-	url = https://github.com/spotify/dockerfile-mode.git
 [submodule "ext/zygospore.el"]
 	path = ext/zygospore.el
 	url = https://github.com/LouisKottmann/zygospore.el.git
