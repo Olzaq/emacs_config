@@ -4,6 +4,9 @@
 ;;; uncomment this line to disable loading of "default.el" at startup
 (setq inhibit-default-init t)
 
+(when (< emacs-major-version 25)
+  (error "Too old emacs version!"))
+
 ;; Install straight.el
 (defvar bootstrap-version)
 (let ((bootstrap-file
