@@ -19,6 +19,7 @@
 (require 'org)
 
 (straight-use-package 'ag)
+(straight-use-package 'csv-mode)
 
 (use-package dash
   :straight t)
@@ -62,7 +63,6 @@
 
 (add-to-list 'load-path "~/.emacs_modules/company-irony")
 (add-to-list 'load-path "~/.emacs_modules/company-mode")
-(add-to-list 'load-path "~/.emacs_modules/csv-mode")
 (add-to-list 'load-path "~/.emacs_modules/emacs-async")
 (add-to-list 'load-path "~/.emacs_modules/hydra.git")
 (add-to-list 'load-path "~/.emacs_modules/irony-mode")
