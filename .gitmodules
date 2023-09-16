@@ -7,18 +7,12 @@
 [submodule "ext/shut-up"]
 	path = ext/shut-up
 	url = https://github.com/cask/shut-up
-[submodule "ext/company-mode"]
-	path = ext/company-mode
-	url = https://github.com/company-mode/company-mode.git
 [submodule "ext/org-mode"]
 	path = ext/org-mode
 	url = https://code.orgmode.org/bzg/org-mode.git
 [submodule "ext/emacs-async"]
 	path = ext/emacs-async
 	url = https://github.com/jwiegley/emacs-async.git
-[submodule "ext/move-text"]
-	path = ext/move-text
-	url = https://github.com/emacsfodder/move-text.git
 [submodule "ext/use-package"]
 	path = ext/use-package
 	url = https://github.com/jwiegley/use-package.git
