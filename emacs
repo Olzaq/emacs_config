@@ -21,6 +21,7 @@
       (eval-print-last-sexp)))
   (load bootstrap-file ))
 
+(straight-use-package 'use-package)
 
 (when (< emacs-major-version 26)
   (setq gnutls-algorithm-priority "NORMAL:-VERS-TLS1.3")
