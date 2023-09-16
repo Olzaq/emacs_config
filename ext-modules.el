@@ -38,6 +38,8 @@
 (use-package markdown-mode
   :straight t)
 
+(straight-use-package 'multiple-cursors)
+
 (use-package s
   :straight t)
 
@@ -61,7 +63,6 @@
 (add-to-list 'load-path "~/.emacs_modules/irony-mode")
 (add-to-list 'load-path "~/.emacs_modules/levenshtein")
 (add-to-list 'load-path "~/.emacs_modules/move-text")
-(add-to-list 'load-path "~/.emacs_modules/multiple-cursors.el")
 (add-to-list 'load-path "~/.emacs_modules/shut-up")
 (add-to-list 'load-path "~/.emacs_modules/swiper")
 (add-to-list 'load-path "~/.emacs_modules/undercover.el")
@@ -74,7 +75,6 @@
   (require 'expand-region)
   (require 'find-lisp)
   (require 'move-text)
-  (require 'multiple-cursors)
   (require 'swiper)
 
   (unless use-lsp-mode
