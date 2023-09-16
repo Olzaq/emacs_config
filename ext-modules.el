@@ -75,20 +75,6 @@
   (require 'find-lisp)
   (require 'move-text)
 
-  (unless use-lsp-mode
-    (straight-use-package 'cmake-ide)
-    (straight-use-package 'company-irony)
-    (straight-use-package 'irony-mode)
-    (straight-use-package 'rtags)
-
-    (require 'irony)
-    (require 'irony-cdb)
-
-    (set-variable 'rtags-path (file-truename "~/.emacs_modules/rtags/bin"))
-    (cmake-ide-setup)
-    (eval-after-load 'company
-      '(add-to-list 'company-backends 'company-irony)))
-
   (editorconfig-mode 1)
   ;; (add-hook 'after-init-hook 'global-company-mode)
   (move-text-default-bindings)

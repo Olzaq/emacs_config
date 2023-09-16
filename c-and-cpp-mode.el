@@ -19,6 +19,19 @@
 
 (defun do-irony-config ()
   "Irony config."
+  (straight-use-package 'cmake-ide)
+  (straight-use-package 'company-irony)
+  (straight-use-package 'irony-mode)
+  (straight-use-package 'rtags)
+
+  (require 'irony)
+  (require 'irony-cdb)
+
+  ;;(set-variable 'rtags-path (file-truename "~/.emacs_modules/rtags/bin"))
+  (cmake-ide-setup)
+  (eval-after-load 'company
+    '(add-to-list 'company-backends 'company-irony))
+
   (add-hook 'c++-mode-hook 'irony-mode)
   (add-hook 'c-mode-hook 'irony-mode)
   (add-hook 'irony-mode-hook 'irony-cdb-autosetup-compile-options))
