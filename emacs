@@ -152,6 +152,7 @@
 (unless running-in-termux
   (unless use-lsp-mode
     (require 'cedet-settings))
+  (require 'git-settings)
   (require 'c-and-cpp-mode)
   (require 'gdb-settings))
 

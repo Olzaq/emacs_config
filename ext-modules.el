@@ -71,7 +71,6 @@
 (unless running-in-termux
   (require 'company)
   (require 'counsel)
-
   (require 'find-lisp)
   (require 'move-text)
 
@@ -92,9 +91,7 @@
 (if (version< emacs-version "25")
       (message "Skipping some modules...")
   (unless running-in-termux
-    (add-hook 'after-init-hook #'global-flycheck-mode))
-    (require 'git-settings))
-
+    (add-hook 'after-init-hook #'global-flycheck-mode)))
 
 (provide 'ext-modules)
 ;;; ext-modules.el ends here
