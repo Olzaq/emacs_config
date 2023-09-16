@@ -9,7 +9,6 @@
 (use-package helm
   :straight t
   :preface
-  (require 'helm-config)
   (require 'helm-grep)
   :demand t
   :bind (("M-x" . helm-M-x)
