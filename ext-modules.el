@@ -51,16 +51,6 @@
   :config
   (yas-global-mode 1))
 
-
-(defun byte-recompile-dir-exclude (dir &optional pattern)
-  "Bytecompile files in DIR unless match PATTERN."
-  (mapc
-   (lambda (file)
-     (unless (if pattern
-                 (string-match-p pattern file))
-       (byte-recompile-file file nil 0)))
-   (directory-files dir t "\.el$")))
-
 (add-to-list 'load-path "~/.emacs_modules/company-irony")
 (add-to-list 'load-path "~/.emacs_modules/company-mode")
 (add-to-list 'load-path "~/.emacs_modules/csv-mode")
@@ -90,7 +80,6 @@
 
   (unless use-lsp-mode
     (add-to-list 'load-path "~/.emacs_modules/cmake-ide")
-    (byte-recompile-dir-exclude "~/.emacs_modules/cmake-ide" "test")
 
     (add-to-list 'load-path "~/.emacs_modules/rtags/src")
     (require 'cmake-ide)
