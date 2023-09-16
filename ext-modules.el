@@ -4,13 +4,6 @@
 
 ;;; Code:
 
-; Make sure org is properly installed
-(add-to-list 'load-path "~/.emacs_modules/org-mode/lisp")
-(unless (file-readable-p (file-truename "~/.emacs_modules/org-mode/lisp/org-loaddefs.el"))
-  (error "Org-mode not properly installed.  Run 'make autoloads'"))
-(require 'org-loaddefs)
-(require 'org)
-
 (straight-use-package 'ag)
 (straight-use-package 'csv-mode)
 
