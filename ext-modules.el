@@ -54,6 +54,7 @@
 (use-package spinner
   :straight t)
 
+(straight-use-package 'shut-up)
 (straight-use-package 'swiper)
 (straight-use-package 'undercover)
 
@@ -63,8 +64,6 @@
   (yas-global-mode 1))
 
 (straight-use-package 'zygospore)
-
-(add-to-list 'load-path "~/.emacs_modules/shut-up")
 
 (unless running-in-termux
   (straight-use-package 'company)
