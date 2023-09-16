@@ -77,13 +77,10 @@
   (require 'move-text)
 
   (unless use-lsp-mode
-    (add-to-list 'load-path "~/.emacs_modules/cmake-ide")
-
-    (add-to-list 'load-path "~/.emacs_modules/rtags/src")
-    (require 'cmake-ide)
+    (straight-use-package 'cmake-ide)
+    (straight-use-package 'rtags)
     (require 'irony)
     (require 'irony-cdb)
-    (require 'rtags)
 
     (set-variable 'rtags-path (file-truename "~/.emacs_modules/rtags/bin"))
     (cmake-ide-setup)
