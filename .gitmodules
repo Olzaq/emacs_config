@@ -19,9 +19,6 @@
 [submodule "ext/org-mode"]
 	path = ext/org-mode
 	url = https://code.orgmode.org/bzg/org-mode.git
-[submodule "ext/expand-region"]
-	path = ext/expand-region
-	url = https://github.com/magnars/expand-region.el.git
 [submodule "ext/zygospore.el"]
 	path = ext/zygospore.el
 	url = https://github.com/LouisKottmann/zygospore.el.git

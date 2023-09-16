@@ -25,7 +25,7 @@
 
 (straight-use-package 'dockerfile-mode)
 (straight-use-package 'editorconfig)
-
+(straight-use-package 'expand-region)
 (use-package f
   :straight t)
 
@@ -60,7 +60,6 @@
 (add-to-list 'load-path "~/.emacs_modules/company-mode")
 (add-to-list 'load-path "~/.emacs_modules/csv-mode")
 (add-to-list 'load-path "~/.emacs_modules/emacs-async")
-(add-to-list 'load-path "~/.emacs_modules/expand-region")
 (add-to-list 'load-path "~/.emacs_modules/hydra.git")
 (add-to-list 'load-path "~/.emacs_modules/irony-mode")
 (add-to-list 'load-path "~/.emacs_modules/levenshtein")
@@ -73,7 +72,6 @@
   (require 'company)
   (require 'counsel)
 
-  (require 'expand-region)
   (require 'find-lisp)
   (require 'move-text)
 
