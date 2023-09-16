@@ -79,24 +79,6 @@
 (add-to-list 'load-path "~/.emacs_modules/zygospore.el")
 
 (unless running-in-termux
-  (byte-recompile-directory "~/.emacs_modules/editorconfig-emacs" 0)
-  ;(byte-recompile-directory "~/.emacs_modules/hydra.git" 0)
-  (if (version< emacs-version "25")
-      (message "Skipping bytecompile...")
-    (byte-recompile-directory "~/.emacs_modules/swiper" 0)
-
-
-  ;(byte-recompile-directory "~/.emacs_modules/company-mode" 0)
-  ;(byte-recompile-directory "~/.emacs_modules/company-irony" 0)
-  ;(byte-recompile-directory "~/.emacs_modules/csv-mode" 0)
-  ;(byte-recompile-directory "~/.emacs_modules/emacs-async" 0)
-  ;(byte-recompile-directory "~/.emacs_modules/expand-region" 0)
-  ;(byte-recompile-directory "~/.emacs_modules/irony-mode" 0)
-  ;(byte-recompile-directory "~/.emacs_modules/levenshtein" 0)
-  ;(byte-recompile-directory "~/.emacs_modules/move-text" 0)
-  ;;(byte-recompile-directory "~/.emacs_modules/org-mode/lisp" 0)
-  ;(byte-recompile-directory "~/.emacs_modules/zygospore.el" 0)
-
   (require 'company)
   (require 'counsel)
   (require 'editorconfig)
