@@ -35,6 +35,8 @@
 (use-package ht
   :straight t)
 
+(straight-use-package 'levenshtein)
+
 (use-package markdown-mode
   :straight t)
 
@@ -64,7 +66,6 @@
 (add-to-list 'load-path "~/.emacs_modules/emacs-async")
 (add-to-list 'load-path "~/.emacs_modules/hydra.git")
 (add-to-list 'load-path "~/.emacs_modules/irony-mode")
-(add-to-list 'load-path "~/.emacs_modules/levenshtein")
 (add-to-list 'load-path "~/.emacs_modules/move-text")
 (add-to-list 'load-path "~/.emacs_modules/shut-up")
 (add-to-list 'load-path "~/.emacs_modules/undercover.el")
