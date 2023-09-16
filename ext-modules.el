@@ -24,6 +24,7 @@
   :straight t)
 
 (straight-use-package 'dockerfile-mode)
+(straight-use-package 'editorconfig)
 
 (use-package f
   :straight t)
@@ -54,7 +55,6 @@
 (add-to-list 'load-path "~/.emacs_modules/company-irony")
 (add-to-list 'load-path "~/.emacs_modules/company-mode")
 (add-to-list 'load-path "~/.emacs_modules/csv-mode")
-(add-to-list 'load-path "~/.emacs_modules/editorconfig-emacs")
 (add-to-list 'load-path "~/.emacs_modules/emacs-async")
 (add-to-list 'load-path "~/.emacs_modules/expand-region")
 (add-to-list 'load-path "~/.emacs_modules/hydra.git")
@@ -70,7 +70,6 @@
 (unless running-in-termux
   (require 'company)
   (require 'counsel)
-  (require 'editorconfig)
 
   (require 'expand-region)
   (require 'find-lisp)
