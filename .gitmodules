@@ -7,9 +7,6 @@
 [submodule "ext/org-mode"]
 	path = ext/org-mode
 	url = https://code.orgmode.org/bzg/org-mode.git
-[submodule "ext/emacs-async"]
-	path = ext/emacs-async
-	url = https://github.com/jwiegley/emacs-async.git
 [submodule "ext/use-package"]
 	path = ext/use-package
 	url = https://github.com/jwiegley/use-package.git

@@ -26,6 +26,7 @@
 
 (straight-use-package 'dockerfile-mode)
 (straight-use-package 'editorconfig)
+(straight-use-package 'emacs-async)
 (straight-use-package 'expand-region)
 (use-package f
   :straight t)
@@ -62,7 +63,6 @@
 
 (straight-use-package 'zygospore)
 
-(add-to-list 'load-path "~/.emacs_modules/emacs-async")
 (add-to-list 'load-path "~/.emacs_modules/shut-up")
 (add-to-list 'load-path "~/.emacs_modules/undercover.el")
 
