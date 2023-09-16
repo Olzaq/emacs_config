@@ -36,6 +36,7 @@
 (use-package ht
   :straight t)
 
+(straight-use-package 'hydra)
 (straight-use-package 'levenshtein)
 
 (use-package markdown-mode
@@ -62,7 +63,6 @@
 (straight-use-package 'zygospore)
 
 (add-to-list 'load-path "~/.emacs_modules/emacs-async")
-(add-to-list 'load-path "~/.emacs_modules/hydra.git")
 (add-to-list 'load-path "~/.emacs_modules/shut-up")
 (add-to-list 'load-path "~/.emacs_modules/undercover.el")
 
