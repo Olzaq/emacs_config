@@ -56,6 +56,8 @@
   :config
   (yas-global-mode 1))
 
+(straight-use-package 'zygospore)
+
 (add-to-list 'load-path "~/.emacs_modules/company-irony")
 (add-to-list 'load-path "~/.emacs_modules/company-mode")
 (add-to-list 'load-path "~/.emacs_modules/csv-mode")
@@ -66,7 +68,6 @@
 (add-to-list 'load-path "~/.emacs_modules/move-text")
 (add-to-list 'load-path "~/.emacs_modules/shut-up")
 (add-to-list 'load-path "~/.emacs_modules/undercover.el")
-(add-to-list 'load-path "~/.emacs_modules/zygospore.el")
 
 (unless running-in-termux
   (require 'company)
@@ -101,7 +102,6 @@
 )
 
 (require 'ido)
-(require 'zygospore)
 ;;(if running-in-termux (ido-mode t))
 
 (if (version< emacs-version "25")
