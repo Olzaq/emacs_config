@@ -55,6 +55,7 @@
   :straight t)
 
 (straight-use-package 'swiper)
+(straight-use-package 'undercover)
 
 (use-package yasnippet
   :straight t
@@ -64,7 +65,6 @@
 (straight-use-package 'zygospore)
 
 (add-to-list 'load-path "~/.emacs_modules/shut-up")
-(add-to-list 'load-path "~/.emacs_modules/undercover.el")
 
 (unless running-in-termux
   (straight-use-package 'company)

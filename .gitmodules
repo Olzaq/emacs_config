@@ -1,6 +1,3 @@
-[submodule "ext/undercover.el"]
-	path = ext/undercover.el
-	url = https://github.com/undercover-el/undercover.el
 [submodule "ext/shut-up"]
 	path = ext/shut-up
 	url = https://github.com/cask/shut-up
