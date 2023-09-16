@@ -49,6 +49,8 @@
 (use-package spinner
   :straight t)
 
+(straight-use-package 'swiper)
+
 (use-package yasnippet
   :straight t
   :config
@@ -64,7 +66,6 @@
 (add-to-list 'load-path "~/.emacs_modules/levenshtein")
 (add-to-list 'load-path "~/.emacs_modules/move-text")
 (add-to-list 'load-path "~/.emacs_modules/shut-up")
-(add-to-list 'load-path "~/.emacs_modules/swiper")
 (add-to-list 'load-path "~/.emacs_modules/undercover.el")
 (add-to-list 'load-path "~/.emacs_modules/zygospore.el")
 
@@ -75,7 +76,6 @@
   (require 'expand-region)
   (require 'find-lisp)
   (require 'move-text)
-  (require 'swiper)
 
   (unless use-lsp-mode
     (add-to-list 'load-path "~/.emacs_modules/cmake-ide")
