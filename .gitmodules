@@ -7,15 +7,9 @@
 [submodule "ext/shut-up"]
 	path = ext/shut-up
 	url = https://github.com/cask/shut-up
-[submodule "ext/irony-mode"]
-	path = ext/irony-mode
-	url = https://github.com/Sarcasm/irony-mode.git
 [submodule "ext/company-mode"]
 	path = ext/company-mode
 	url = https://github.com/company-mode/company-mode.git
-[submodule "ext/company-irony"]
-	path = ext/company-irony
-	url = https://github.com/Sarcasm/company-irony.git
 [submodule "ext/org-mode"]
 	path = ext/org-mode
 	url = https://code.orgmode.org/bzg/org-mode.git

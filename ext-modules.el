@@ -61,11 +61,9 @@
 
 (straight-use-package 'zygospore)
 
-(add-to-list 'load-path "~/.emacs_modules/company-irony")
 (add-to-list 'load-path "~/.emacs_modules/company-mode")
 (add-to-list 'load-path "~/.emacs_modules/emacs-async")
 (add-to-list 'load-path "~/.emacs_modules/hydra.git")
-(add-to-list 'load-path "~/.emacs_modules/irony-mode")
 (add-to-list 'load-path "~/.emacs_modules/move-text")
 (add-to-list 'load-path "~/.emacs_modules/shut-up")
 (add-to-list 'load-path "~/.emacs_modules/undercover.el")
@@ -79,7 +77,10 @@
 
   (unless use-lsp-mode
     (straight-use-package 'cmake-ide)
+    (straight-use-package 'company-irony)
+    (straight-use-package 'irony-mode)
     (straight-use-package 'rtags)
+
     (require 'irony)
     (require 'irony-cdb)
 
