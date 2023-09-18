@@ -17,7 +17,6 @@
   :mode ("Dockerfile\\'" . dockerfile-mode))
 
 (use-package editorconfig
-  :straight t
   :config
   (editorconfig-mode 1))
 
@@ -41,7 +40,6 @@
 (straight-use-package 'undercover)
 
 (use-package yasnippet
-  :straight t
   :config
   (yas-global-mode 1))
 

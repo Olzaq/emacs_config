@@ -7,7 +7,6 @@
 ;; Helm setup
 
 (use-package helm
-  :straight t
   :preface
   (require 'helm-grep)
   :demand t

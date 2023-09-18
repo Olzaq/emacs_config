@@ -40,7 +40,6 @@
 (defun do-lsp-mode-config ()
   "LSP mode config."
   (use-package lsp-mode
-    :straight t
     :commands lsp
     :hook (;; replace XXX-mode with concrete major-mode(e. g. python-mode)
            (c++-mode . lsp)
@@ -55,7 +54,6 @@
 
   (use-package lsp-ui
     :after lsp-mode
-    :straight t
     :commands lsp-ui-mode
     :config
     (add-hook 'lsp-ui-doc-frame-hook
@@ -79,7 +77,6 @@
 
   (use-package company-lsp
     :after lsp-mode
-    :straight t
     :commands company-lsp
     :config
     (setq company-lsp-enable-snippet t
