@@ -19,6 +19,7 @@
 
 (defun do-irony-config ()
   "Irony config."
+  (require 'cedet-settings)
   (straight-use-package 'cmake-ide)
   (straight-use-package 'company-irony)
   (straight-use-package 'irony-mode)
