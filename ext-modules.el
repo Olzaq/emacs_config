@@ -5,7 +5,11 @@
 ;;; Code:
 
 (straight-use-package 'ag)
-(straight-use-package 'csv-mode)
+
+(use-package csv-mode
+  :mode ("\\.[Cc][Ss][Vv]\\'" . csv-mode)
+  :config (autoload 'csv-mode "csv-mode"
+            "Major mode for editing comma-separated value files." t))
 
 (use-package dash
   :straight t)
@@ -65,10 +69,6 @@
 
   ;; (add-hook 'after-init-hook 'global-company-mode)
   (move-text-default-bindings)
-
-  (add-to-list 'auto-mode-alist '("\\.[Cc][Ss][Vv]\\'" . csv-mode))
-  (autoload 'csv-mode "csv-mode"
-    "Major mode for editing comma-separated value files." t)
 )
 
 (require 'ido)
