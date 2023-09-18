@@ -25,7 +25,12 @@
   :straight t)
 
 (straight-use-package 'dockerfile-mode)
-(straight-use-package 'editorconfig)
+
+(use-package editorconfig
+  :straight t
+  :config
+  (editorconfig-mode 1))
+
 (straight-use-package 'emacs-async)
 (straight-use-package 'expand-region)
 (use-package f
@@ -71,7 +76,6 @@
   (straight-use-package 'find-lisp)
   (straight-use-package 'move-text)
 
-  (editorconfig-mode 1)
   ;; (add-hook 'after-init-hook 'global-company-mode)
   (move-text-default-bindings)
 
