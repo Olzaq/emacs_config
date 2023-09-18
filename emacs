@@ -22,6 +22,7 @@
   (load bootstrap-file ))
 
 (straight-use-package 'use-package)
+(setq straight-use-package-by-default t)
 
 (when (< emacs-major-version 26)
   (setq gnutls-algorithm-priority "NORMAL:-VERS-TLS1.3")
