@@ -10,7 +10,8 @@
 (use-package dash
   :straight t)
 
-(straight-use-package 'dockerfile-mode)
+(use-package dockerfile-mode
+  :mode ("Dockerfile\\'" . dockerfile-mode))
 
 (use-package editorconfig
   :straight t
@@ -64,8 +65,6 @@
 
   ;; (add-hook 'after-init-hook 'global-company-mode)
   (move-text-default-bindings)
-
-  (add-to-list 'auto-mode-alist '("Dockerfile\\'" . dockerfile-mode))
 
   (add-to-list 'auto-mode-alist '("\\.[Cc][Ss][Vv]\\'" . csv-mode))
   (autoload 'csv-mode "csv-mode"
