@@ -11,8 +11,7 @@
   :config (autoload 'csv-mode "csv-mode"
             "Major mode for editing comma-separated value files." t))
 
-(use-package dash
-  :straight t)
+(straight-use-package 'dash)
 
 (use-package dockerfile-mode
   :mode ("Dockerfile\\'" . dockerfile-mode))
@@ -24,32 +23,19 @@
 
 (straight-use-package 'emacs-async)
 (straight-use-package 'expand-region)
-(use-package f
-  :straight t)
+(straight-use-package 'f)
 
 (unless running-in-termux
   (straight-use-package 'flycheck))
 
-(use-package ht
-  :straight t)
-
+(straight-use-package 'ht)
 (straight-use-package 'hydra)
 (straight-use-package 'levenshtein)
-
-(use-package markdown-mode
-  :straight t)
-
+(straight-use-package 'markdown-mode)
 (straight-use-package 'multiple-cursors)
-
-(use-package s
-  :straight t)
-
-(use-package seq
-  :straight t)
-
-(use-package spinner
-  :straight t)
-
+(straight-use-package 's)
+(straight-use-package 'seq)
+(straight-use-package 'spinner)
 (straight-use-package 'shut-up)
 (straight-use-package 'swiper)
 (straight-use-package 'undercover)
