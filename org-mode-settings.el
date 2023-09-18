@@ -4,6 +4,8 @@
 
 ;;; Code:
 
+(require 'find-lisp)
+
 (defvar org-mode-files-directory "~/Documents/org-mode/org-files")
 
 (unless (file-directory-p org-mode-files-directory)
