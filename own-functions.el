@@ -176,9 +176,9 @@
   "Close only if y was pressed."
   (interactive)
   (if (y-or-n-p (format "Are you sure you want to close this frame? "))
-      (if (< 1 (length (frame-list)))
+      (condition-case nil
           (delete-frame)
-        (save-buffers-kill-emacs))
+        (error (save-buffers-kill-emacs)))
     (message nil)))
 
 (provide 'own-functions)
