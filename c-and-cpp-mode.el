@@ -66,8 +66,8 @@
           lsp-ui-sideline-show-hover        t)
     (custom-set-faces
       '(lsp-ui-doc-background ((nil :background "#c888e8")))
-      '(lsp-ui-doc-header ((t :foreground "#EEEEEE" :background "#000011")))
-      '(lsp-ui-doc-url ((nil :background "#000011"))))
+      '(lsp-ui-doc-header ((t :foreground "#EEEEEE" :background "#4d772d")))
+      '(lsp-ui-doc-url ((nil :background "#b666e6"))))
 
     :init (setq lsp-ui-sideline-enable t
                 lsp-ui-peek-enable t
