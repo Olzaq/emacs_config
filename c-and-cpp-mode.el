@@ -28,7 +28,6 @@
   (require 'irony)
   (require 'irony-cdb)
 
-  ;;(set-variable 'rtags-path (file-truename "~/.emacs_modules/rtags/bin"))
   (cmake-ide-setup)
   (eval-after-load 'company
     '(add-to-list 'company-backends 'company-irony))
@@ -66,9 +65,9 @@
           lsp-ui-sideline-show-code-actions t
           lsp-ui-sideline-show-hover        t)
     (custom-set-faces
-      '(lsp-ui-doc-background ((nil :background "#000000")))
-      '(lsp-ui-doc-header ((t :foreground "#EEEEEE" :background "#000000")))
-      '(lsp-ui-doc-url ((nil :background "#000000"))))
+      '(lsp-ui-doc-background ((nil :background "#c888e8")))
+      '(lsp-ui-doc-header ((t :foreground "#EEEEEE" :background "#000011")))
+      '(lsp-ui-doc-url ((nil :background "#000011"))))
 
     :init (setq lsp-ui-sideline-enable t
                 lsp-ui-peek-enable t
