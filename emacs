@@ -78,7 +78,9 @@
 (setq diff-switches "-u")
 
 ;; Line/Column numbers
-(global-linum-mode t)
+(if (< emacs-major-version 26)
+    (global-linum-mode t)
+    (global-display-line-numbers-mode 1))
 (setq column-number-mode t)
 ;; One line scrolling
 (setq mouse-wheel-scroll-amount '(1 ((shift) . 1)))
