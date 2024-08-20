@@ -29,6 +29,8 @@
 
   # list aliases
   la = "!git config -l | grep alias | cut -c 7-"
+  # list matching files for a rev
+  list-matching-files-for-rev = "!sh -c 'git ls-tree --full-tree -r $1 | grep -v commit | awk \"/$0/ { cmd=\\\"git cat-file blob \\\" \\$3; print \\\"\\n\\n\\\"\\$4\\\"\\n----------\\\"; while ((cmd|getline result)>0) { print result }; close(cmd); } \"' "
 
   showmerge = "!sh -c 'git show $1 | grep --color=never "Merge: " | sed -e \"s/Merge: //\" | sed -e \"s/ /.../\" | xargs git diff '"
 
