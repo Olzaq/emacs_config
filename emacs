@@ -160,6 +160,7 @@
 (unless running-in-termux
   (require 'git-settings)
   (require 'c-and-cpp-mode)
+  (require 'rust-settings)
   (require 'gdb-settings))
 
 (require 'own-mappings)
